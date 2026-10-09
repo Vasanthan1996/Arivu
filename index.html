@@ -743,6 +743,164 @@ svg.i{width:1.15em;height:1.15em;flex:none;vertical-align:-.18em}
   .hs-dots button{width:30px}
 }
 @media (max-width:640px){.gain,.projs,.bro-2{grid-template-columns:1fr}.cstats{grid-template-columns:1fr 1fr}.mbody{padding:0 14px 16px}.module summary{padding:14px}.sn-cta{display:none}.gain{padding:18px}}
+
+/* ===== v11: portal (student / faculty / admin) ===== */
+#toasts{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:grid;gap:8px;justify-items:center;z-index:110;width:max-content;max-width:calc(100% - 32px);pointer-events:none}
+#toasts .toast{position:static;transform:none;left:auto;bottom:auto;max-width:100%}
+a.btn{text-decoration:none}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.panel h1{font-size:clamp(26px,3vw,34px);color:var(--navy)}
+.ptop{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.ptop h1{margin-top:6px}
+.tabs button{display:flex;align-items:center;gap:10px}
+.tabs button svg{width:18px;height:18px;opacity:.75;flex:none}
+.tabs button[aria-current="true"] svg{opacity:1}
+.tabs .tlogout{color:var(--bad);margin-top:6px;border-top:1px solid var(--line);border-radius:0 0 12px 12px}
+.ucard{display:flex;gap:10px;align-items:center;padding:10px 10px 14px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.ucard b{display:block;color:var(--navy);font-family:var(--f-head);font-size:15px;line-height:1.2}
+.ucard small{display:block;color:var(--muted);font-size:12px;font-weight:700}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;flex:none;font-family:var(--f-head);font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,var(--brand),var(--navy))}
+.demo-banner{display:flex;gap:10px;align-items:flex-start;background:#fff7ec;border:1px solid #ffd9b0;color:#7a4a12;border-radius:14px;padding:12px 14px;font-size:14px}
+.demo-banner svg{color:var(--flame);margin-top:2px}
+.bh{font-size:18px;color:var(--navy);margin-bottom:12px}
+.db{display:block}small.db{color:var(--muted);font-size:13px;margin-top:2px}
+.pcols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.ptools{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.picker{display:grid;gap:5px;min-width:0}
+.picker span{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.picker select,.picker input{padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:#fff;min-width:220px;max-width:100%;color:var(--fg)}
+.picker.grow{flex:1}.picker.grow input{width:100%}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pgrid .field.full{grid-column:1/-1}
+.field .help{color:var(--muted);font-size:12.5px}
+.pf-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.pform .formerr{margin-top:10px}
+.modal.pmodal{width:min(640px,100%)}.modal.pmodal.wide{width:min(860px,100%)}
+.daypick{display:flex;gap:6px;flex-wrap:wrap}
+.daypick label{position:relative;cursor:pointer}
+.daypick input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.daypick span{display:block;padding:8px 12px;border:1.5px solid var(--line);border-radius:10px;font-weight:800;font-size:14px;color:var(--muted)}
+.daypick input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}
+.daypick input:focus-visible+span{outline:3px solid var(--flame)}
+.pill.bad{background:#fde8e8;color:var(--bad)}.pill.info{background:#e8eeff;color:var(--brand)}
+.tag{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:2px 8px;font-size:12.5px;font-weight:700;color:var(--navy);margin:2px 0}
+.acts{display:flex;gap:6px;flex-wrap:nowrap}
+td.wrapcell,.wrapcell{white-space:normal;min-width:160px;max-width:340px}
+.ptable td{vertical-align:middle}
+.ptable input[type=text]{width:100%;min-width:180px;padding:8px 10px;border:1.5px solid var(--line);border-radius:10px}
+.numin{width:84px;padding:8px 10px;border:1.5px solid var(--line);border-radius:10px}
+.btn.armed{background:var(--bad)!important;color:#fff!important;border-color:var(--bad)!important}
+.empty{display:grid;justify-items:center;gap:8px}
+.empty svg{width:28px;height:28px;color:#aab3d6}
+#busy{position:fixed;top:14px;left:50%;transform:translate(-50%,-80px);background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:8px 16px;border-radius:999px;z-index:120;transition:transform .25s var(--ease);pointer-events:none}
+#busy.on{transform:translate(-50%,0)}
+/* Next class + facts */
+.nextcard{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:24px 26px;border-radius:20px;color:#fff;background:linear-gradient(120deg,var(--navy),#1a2f86);position:relative;overflow:hidden;isolation:isolate;box-shadow:var(--sh-lg)}
+.nextcard::before{content:"";position:absolute;right:-60px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,140,60,.5),transparent 65%);z-index:-1}
+.nextcard.live{background:linear-gradient(120deg,#0b4f3a,#13a36b)}
+.nextcard h2{font-size:clamp(22px,2.6vw,30px);margin:6px 0}
+.nextcard p{margin:0;color:#dfe6ff;font-weight:700}.nextcard small{color:#b9c4f5}
+.nc-r{display:grid;gap:8px;justify-items:end;text-align:right}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0}
+.facts>div{display:flex;gap:10px;align-items:flex-start;background:var(--soft);border-radius:12px;padding:12px}
+.facts svg{color:var(--flame);margin-top:2px}
+.facts small{display:block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts span{font-weight:700;color:var(--navy);font-size:14.5px}
+.meet{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border:1.5px dashed #c9d3f5;border-radius:14px;padding:12px 14px}
+.meet>div{display:flex;gap:10px;align-items:flex-start}.meet svg{color:var(--brand);margin-top:3px}
+.meet b{display:block;color:var(--navy)}.meet small{color:var(--muted)}
+.sub{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.dchip{display:grid;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;min-width:118px}
+.dchip b{color:var(--navy);font-size:14px}.dchip small{color:var(--muted);font-size:12px}
+.dchip.now{border-color:var(--flame);background:#fff6ef}.dchip.off{background:#fdf0f0;border-color:#f6c9c9}.dchip.off small{color:var(--bad);font-weight:700}
+.remark{display:flex;gap:8px;align-items:flex-start;margin:8px 0 0;color:#3b4570;font-size:14.5px}.remark svg{color:var(--flame);margin-top:3px}
+.enrollcard+.enrollcard{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+/* Notices + topics */
+.nlist{list-style:none;padding:0;margin:0;display:grid}
+.nlist li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.nlist li:last-child{border-bottom:0}
+.ndate{width:48px;flex:none;text-align:center;border-radius:12px;background:var(--soft);padding:6px 0}
+.ndate b{display:block;font-family:var(--f-head);font-size:20px;color:var(--navy);line-height:1.1}.ndate span{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--flame)}
+.nbody{flex:1;min-width:0}.nrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.nrow b{color:var(--navy)}
+.nbody small{color:var(--muted);font-size:13px}.nbody p{margin:4px 0 0;color:#3b4570;font-size:14.5px}
+.tline{list-style:none;padding:0;margin:0}
+.tline li{display:grid;grid-template-columns:14px minmax(0,1fr) auto;gap:12px;align-items:start;padding:0 0 16px;position:relative}
+.tline li::before{content:"";position:absolute;left:6px;top:14px;bottom:0;width:2px;background:var(--line)}
+.tline li:last-child::before{display:none}
+.tdot{width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--flame);margin-top:3px;position:relative;z-index:1}
+.tline small{display:block;color:var(--muted);font-size:13px}.tline b{color:var(--navy)}.tline p{margin:4px 0 0;color:#3b4570;font-size:14.5px}
+.syl{margin-top:14px}.module.done summary .n{background:#e3f7ee;color:var(--ok)}
+.trow2{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.trow2:last-child{border-bottom:0}.trow2 b{color:var(--navy)}.trow2 small{display:block;color:var(--muted);font-size:13px}
+.files{list-style:none;padding:0;margin:0}
+.files li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.files li:last-child{border-bottom:0}
+.files li>svg{color:var(--brand);width:22px;height:22px}.files li>div{flex:1;min-width:0}.files b{display:block;color:var(--navy)}.files small{color:var(--muted)}
+/* Attendance */
+.roster-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.roster-head small{display:block;color:var(--muted);font-size:13px}
+.rrow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.rname{flex:1;min-width:0}.rname b{display:block;color:var(--navy)}.rname small{color:var(--muted);font-size:12.5px;font-family:var(--f-mono)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden;flex:none}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.seg span{display:block;padding:8px 14px;font-weight:800;font-size:13.5px;color:var(--muted);border-left:1px solid var(--line)}
+.seg label:first-child span{border-left:0}
+.seg input:focus-visible+span{outline:3px solid var(--flame);outline-offset:-3px}
+.seg .sP input:checked+span{background:var(--ok);color:#fff}.seg .sA input:checked+span{background:var(--bad);color:#fff}.seg .sL input:checked+span{background:var(--warn);color:#fff}
+.cals{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.cal b{color:var(--navy);font-family:var(--f-head)}
+.cgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.cgrid em{font-style:normal;text-align:center;font-size:11px;font-weight:800;color:var(--muted)}
+.cgrid span{aspect-ratio:1;display:grid;place-items:center;border-radius:8px;font-size:13px;font-weight:700;color:#8a94b8;background:var(--soft)}
+.cP{background:#d9f4e7!important;color:var(--ok)!important}.cA{background:#fde0e0!important;color:var(--bad)!important}.cL{background:#fff1d6!important;color:var(--warn)!important}.cH{background:#e8eeff!important;color:var(--brand)!important}
+.clegend{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.clegend span{font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:6px}
+/* Recordings */
+.vbox{padding:14px}
+.vplayer{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:14px;overflow:hidden;background:#0b1437;user-select:none;-webkit-user-select:none}
+.vplayer iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vshield{position:absolute;top:0;right:0;width:70px;height:62px;z-index:2}
+.vmark{position:absolute;left:4%;top:8%;z-index:3;pointer-events:none;color:rgba(255,255,255,.28);font-weight:800;font-size:clamp(11px,1.4vw,15px);text-shadow:0 1px 2px rgba(0,0,0,.3);animation:vmark 24s linear infinite;white-space:nowrap}
+@keyframes vmark{0%{left:4%;top:8%}25%{left:58%;top:22%}50%{left:30%;top:78%}75%{left:6%;top:52%}100%{left:4%;top:8%}}
+.vdemo{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:8px;text-align:center;color:#fff;padding:20px}
+.vdemo svg{width:46px;height:46px;color:var(--flame)}.vdemo span{color:#b9c4f5;max-width:44ch}
+.vmeta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}.vmeta b{display:block;color:var(--navy)}.vmeta small{color:var(--muted)}
+.thumb>b svg{width:26px;height:26px}
+/* Certificates */
+.certs{display:grid;gap:16px}
+.certcard{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:20px;align-items:center}
+.certcard h3{color:var(--navy);font-size:20px}
+.cthumb .cert-svg{box-shadow:var(--sh)}
+.certimg{all:unset;display:block;cursor:zoom-in;border-radius:14px}
+.certimg:focus-visible{outline:3px solid var(--flame)}
+.certimg img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:var(--sh-lg);border:1px solid var(--line);background:#f4f6fc;aspect-ratio:800/560}
+/* Login + verify */
+.auth-list{list-style:none;padding:0;margin:4px 0;display:grid;gap:10px}
+.auth-list li{display:flex;gap:10px;align-items:center;color:#dfe6ff;font-weight:700}.auth-list svg{color:#ffcf8a}
+.demo-logins{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.vres{display:flex;gap:16px;align-items:flex-start;margin-top:18px}
+.vres>svg{width:44px;height:44px;flex:none;border-radius:12px;padding:9px}
+.vres.good>svg{background:#e3f7ee;color:var(--ok)}.vres.bad>svg{background:#fde8e8;color:var(--bad)}
+.vres b{font-family:var(--f-head);font-size:20px;color:var(--navy)}.vres p{margin:8px 0 0;color:var(--muted)}
+.vres dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:12px 0 0}
+.vres dt{color:var(--muted);font-weight:700}.vres dd{margin:0;color:var(--navy);font-weight:800}
+@media (max-width:960px){
+  .tabs{flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;padding:6px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs .ucard{display:none}
+  .tabs button{white-space:nowrap;flex:none}
+  .tabs .tlogout{border-top:0;margin-top:0}
+  .pcols,.certcard{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .pgrid{grid-template-columns:1fr}
+  .rrow{flex-wrap:wrap}.rrow .seg{width:100%}.rrow .seg label{flex:1;text-align:center}
+  .nc-r{justify-items:start;text-align:left}
+  .facts{grid-template-columns:1fr}
+  .picker select,.picker input{min-width:0;width:100%}.ptools .picker{flex:1 1 100%}
+  .tline li{grid-template-columns:14px minmax(0,1fr)}.tline li>.btn{grid-column:2;justify-self:start}
+}
 @page{margin:14mm 12mm}
 @media print{
   body{background:#fff}
@@ -779,7 +937,7 @@ svg.i{width:1.15em;height:1.15em;flex:none;vertical-align:-.18em}
         <div id="fcontact"></div></div>
       <div><h4>Career tracks</h4><div id="ftracks"></div></div>
       <div><h4>Flagship programs</h4><div id="fflag"></div></div>
-      <div><h4>Institute</h4><button data-go="about">About Arivu</button><button data-go="programs">All programs</button><button data-go="trainers">Trainers</button><button data-go="placements">Placements</button><button data-go="contact">Contact</button><button data-act="enq">Book a free demo</button><button data-go="signin">Student log in</button></div>
+      <div><h4>Institute</h4><button data-go="about">About Arivu</button><button data-go="programs">All programs</button><button data-go="trainers">Trainers</button><button data-go="placements">Placements</button><button data-go="contact">Contact</button><button data-act="enq">Book a free demo</button><button data-go="signin">Portal log in</button><button data-go="verify">Verify a certificate</button></div>
     </div>
     <div class="fbot"><span>© 2026 Arivu Institute of AI &amp; Analytics · Puducherry · Villupuram</span><span>In collaboration with SRM Infotech, Pondicherry and JK Education</span></div>
   </div>
@@ -789,16 +947,18 @@ svg.i{width:1.15em;height:1.15em;flex:none;vertical-align:-.18em}
 <noscript><p style="padding:24px;font:16px sans-serif">Please turn on JavaScript to view the Arivu website.</p></noscript>
 <script>
 /* ================= SITE SETTINGS (edit these) =================
-   leadWebhook : Google Apps Script web-app URL. When set, every brochure, demo and contact
-                 form is also sent there (see SETUP.md) so leads land in a Google Sheet.
-   whatsapp    : number with country code, digits only, e.g. "919876543210". Adds WhatsApp buttons.
-   phone/email : shown on the contact page and footer when filled in.               */
+   api       : your Google Apps Script web-app URL (the /exec link). It stores leads and runs the
+               student, faculty and admin portal on your Google Sheet. See SETUP.md.
+   whatsapp  : number with country code, digits only, e.g. "919876543210". Adds WhatsApp buttons.
+   phone/email : shown on the contact page and footer when filled in.
+   videoSandbox: keeps the Drive player from opening the video in a new tab. Set to false only if videos won't play. */
 const CONFIG={
   siteUrl:"https://arivu-six.vercel.app/",
-  leadWebhook:"",
+  api:"https://script.google.com/macros/s/AKfycbxP9TXBCaZ29nsffEkVsqXC7RPt471YiJ4xA1CXgVmuhunPGbVylRGGMGQjSHOFoQRm/exec",
   whatsapp:"",
   phone:"",
   email:"",
+  videoSandbox:true,
   campuses:[["Puducherry campus","Full address coming soon"],["Villupuram campus","Full address coming soon"]]
 };
 const HOST=location.hostname;
@@ -1316,11 +1476,6 @@ function logoSVG(size=46){const k="lg"+(uid++);return`<svg viewBox="0 0 48 48" w
 <path d="M16.5 28 H31.5" stroke="url(#${k}b)" stroke-width="3.6" stroke-linecap="round"/><circle cx="16.5" cy="28" r="2.6" fill="#7fd8ff"/><circle cx="24" cy="28" r="2.6" fill="#fff"/><circle cx="31.5" cy="28" r="2.6" fill="#7fd8ff"/>
 <circle cx="24" cy="10" r="4" fill="url(#${k}b)"/><path d="M33 8l1.2 2.6 2.6 1.2-2.6 1.2L33 15.6l-1.2-2.6-2.6-1.2 2.6-1.2z" fill="#ffb703"/></svg>`}
 
-const RECORDINGS={
- dsml:[["Pandas: cleaning messy CSVs","2026-09-27","1:52:10",2],["Groupby and pivot tables","2026-09-28","1:47:33",2],["Probability refresher","2026-10-01","1:38:02",4]],
- pbi:[["Power Query: merging sources","2026-09-20","1:21:05",1],["Building a star schema","2026-09-27","1:33:48",2],["CALCULATE and filter context","2026-10-01","1:44:12",3]],
- aie:[["Python for engineers: day 1","2026-09-26","1:40:12",1],["SQL joins in practice","2026-09-27","1:36:40",2]]
-};
 const HS=[
  {img:"ai-analytics",tag:"Industry-led AI &amp; analytics training",h:'Learn <em>MLOps, Full-Stack AI &amp; Supply Chain</em> on real-world projects',p:"Industry-led training from working professionals. Live classes in English and Tamil, every session recorded, and placement support with 100+ partners.",course:"aie"},
  {img:"fullstack-ai",pos:"center 25%",tag:"First in region",d:1,h:'Become a <em>Full-Stack AI Engineer</em> in 4 months',p:"Python, machine learning, LLMs, RAG, agents, APIs, deployment and monitoring. Build and ship real AI products.",course:"aie"},
@@ -1337,19 +1492,8 @@ const GALLERY=[
  {k:"g:5",t:"Generative AI for content",s:"AI for digital marketing",c:{track:"dm",img:"ai-creative",pos:"center 30%"}}
 ];
 const state={
-  route:"home",hs:0,courseId:null,track:"all",q:"",user:null,tab:"overview",unlocked:{},watching:null,photos:{},fab:false,fabCourse:null,bro:null,mega:false,
-  users:[
-    {id:1,name:"Admin",email:"admin@arivu.in",pass:"admin123",role:"admin"},
-    {id:2,name:"Priya Raman",email:"priya@example.com",pass:"student123",role:"student",phone:"9876543210",
-     enrolled:[{course:"aie",batch:"FSAI-Oct-26 (Weekend)",done:{"0":true,"1":true}},{course:"pbi",batch:"PBI-Sep-26 (Weekday)",done:{"0":true,"1":true,"2":true}}]},
-    {id:3,name:"Karthik S",email:"karthik@example.com",pass:"student123",role:"student",phone:"9443012345",enrolled:[{course:"dsml",batch:"DS-Sep-26 (Weekend)",done:{"0":true,"1":true}}]}
-  ],
-  leads:[
-    {name:"Divya M",email:"divya.m@example.com",phone:"9600112233",course:"mlops",at:"2026-10-02 18:40",status:"new",src:"Brochure"},
-    {name:"Arun Kumar",email:"arunk@example.com",phone:"9789001122",course:"scm",at:"2026-10-02 11:05",status:"called",src:"Brochure"},
-    {name:"Fathima B",email:"fathima.b@example.com",phone:"9940556677",course:"dmp",at:"2026-10-01 20:12",status:"new",src:"Free demo"},
-    {name:"Ravi Shankar",email:"ravi.s@example.com",phone:"8122334455",course:"aie",at:"2026-09-30 09:30",status:"enrolled",src:"Contact page"}
-  ]
+  route:"home",hs:0,courseId:null,track:"all",q:"",unlocked:{},photos:{},fab:false,fabCourse:null,bro:null,mega:false,
+  token:null,db:null,user:null,ptab:"home",pbatch:null,pdate:null,pq:"",watch:null,certOpen:null,verifyId:""
 };
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1357,7 +1501,7 @@ const course=id=>COURSES.find(c=>c.id===id);
 const dur=c=>c.weeks>=8?`${c.weeks/4} months`:`${c.weeks} weeks`;
 const hpw=c=>Math.round(c.hours/c.weeks);
 const tc=t=>TRACKS[t].color;
-function toast(m){const t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2800)}
+function toast(m){let box=$("#toasts");if(!box){box=document.createElement("div");box.id="toasts";box.setAttribute("aria-live","polite");document.body.appendChild(box)}const t=document.createElement("div");t.className="toast";t.setAttribute("role","status");t.textContent=m;box.appendChild(t);while(box.children.length>3)box.firstChild.remove();setTimeout(()=>t.remove(),3200)}
 function stamp(){const n=new Date(),p=x=>String(x).padStart(2,"0");return`${n.getFullYear()}-${p(n.getMonth()+1)}-${p(n.getDate())} ${p(n.getHours())}:${p(n.getMinutes())}`}
 const ARROW='<span class="arr">→</span>';
 
@@ -1374,22 +1518,496 @@ const nextB=c=>batches(c)[0];
 const fmtD=(t,o={weekday:"short",day:"numeric",month:"short"})=>new Date(t).toLocaleDateString("en-IN",{...o,timeZone:"UTC"});
 function sched(c,kind){const h=hpw(c);if(kind==="Weekend")return`Sat & Sun · ${h>=9?5:h>=7?4:3} hrs a day`;return h>=9?"Mon–Fri · 2 hrs a day":h>=7?"Mon–Thu · 2 hrs a day":"Mon, Wed & Fri · 2 hrs a day"}
 
-/* ---------- Leads to Google Sheet (live site only, when CONFIG.leadWebhook is set) ---------- */
-function sendLead(l){
-  if(!LIVE||!CONFIG.leadWebhook)return;
-  try{fetch(CONFIG.leadWebhook,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({...l,course:course(l.course)?.title||l.course,page:location.href})}).catch(()=>{})}catch(e){}
-}
 const waLink=(text="")=>CONFIG.whatsapp?`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text||"Hi Arivu, I'd like to know more about your programs.")}`:"";
 
 /* ---------- Routing (shareable links like #course-mlops) ---------- */
-const ROUTES=["home","programs","trainers","placements","about","contact","signin","portal"];
+const ROUTES=["home","programs","trainers","placements","about","contact","signin","portal","verify"];
 function hashFor(){return state.route==="course"?"course-"+state.courseId:state.route}
-function readHash(){const h=decodeURIComponent(location.hash.slice(1));if(h.startsWith("course-")&&course(h.slice(7)))return{route:"course",courseId:h.slice(7)};return{route:ROUTES.includes(h)?h:"home"}}
+function readHash(){const h=decodeURIComponent(location.hash.slice(1));if(h.startsWith("course-")&&course(h.slice(7)))return{route:"course",courseId:h.slice(7)};if(/^verify-/i.test(h))return{route:"verify",verifyId:h.slice(7).toUpperCase()};return{route:ROUTES.includes(h)?h:"home"}}
 function go(route,extra={}){
   Object.assign(state,{route,mega:false},extra);$("#mnav").hidden=true;$(".menu-btn").setAttribute("aria-expanded","false");render();window.scrollTo(0,0);
   const h=hashFor();if(location.hash.slice(1)!==h){try{location.hash=h}catch(e){}}
 }
-addEventListener("hashchange",()=>{const r=readHash();if(r.route===state.route&&(r.route!=="course"||r.courseId===state.courseId))return;closeLayer();Object.assign(state,{mega:false,tab:"overview",watching:null},r);render();window.scrollTo(0,0)});
+addEventListener("hashchange",()=>{const r=readHash();if(r.route===state.route&&(r.route!=="course"||r.courseId===state.courseId)&&!r.verifyId)return;closeLayer();Object.assign(state,{mega:false},r);render();window.scrollTo(0,0)});
+
+/* ===================== ARIVU PORTAL CORE =====================
+   One copy of the business rules, shared by:
+   - the Google Apps Script backend (your Google Sheet is the database)
+   - the website's preview/demo mode
+   Plain ES2019 so it runs on Apps Script V8 and in every browser. */
+var ARIVU_SCHEMA={
+  Users:["id","role","name","email","phone","passHash","salt","status","studentCode","createdAt","lastLogin"],
+  Sessions:["token","userId","expires","createdAt"],
+  Batches:["id","name","courseId","facultyId","kind","days","startTime","endTime","startDate","endDate","mode","meetingLink","meetingInfo","status","createdAt"],
+  Enrollments:["id","studentId","batchId","courseId","status","progress","remark","enrolledAt","updatedAt"],
+  Attendance:["id","batchId","date","studentId","status","markedBy","markedAt"],
+  Topics:["id","batchId","date","module","topic","notes","facultyId","createdAt"],
+  Recordings:["id","batchId","title","date","module","url","addedBy","createdAt"],
+  Notes:["id","batchId","title","url","kind","date","addedBy","createdAt"],
+  Events:["id","type","title","date","endDate","batchId","details","createdBy","createdAt"],
+  Leaves:["id","userId","from","to","reason","status","decidedBy","decidedAt","createdAt"],
+  Certificates:["id","certNo","studentId","courseId","batchId","issueDate","grade","status","issuedBy","createdAt"],
+  Leads:["Received","Name","Email","WhatsApp","Program","Source","Message","Page","Status"]
+};
+
+/* Table access over a "grid" (a Google Sheet tab, or an in-memory array in demo mode) */
+function arivuDB(open,schema){
+  var cache={};
+  function load(name){
+    if(cache[name])return cache[name];
+    var want=schema[name],g=open(name,want),v=g.values();
+    var head=(v[0]||[]).map(function(x){return String(x).trim()});
+    if(!head.length||head.every(function(h){return !h})){head=want.slice();g.setHeader(head)}
+    var miss=want.filter(function(h){return head.indexOf(h)<0});
+    if(miss.length){head=head.concat(miss);g.setHeader(head)}
+    var rows=[];
+    for(var i=1;i<v.length;i++){
+      var r=v[i];if(r.every(function(x){return x===""||x===null||x===undefined}))continue;
+      var o={_row:i+1};head.forEach(function(h,j){if(h)o[h]=r[j]===undefined||r[j]===null?"":String(r[j])});rows.push(o);
+    }
+    return cache[name]={g:g,head:head,rows:rows};
+  }
+  function toArr(t,o){return t.head.map(function(h){return o[h]===undefined||o[h]===null?"":String(o[h])})}
+  return{
+    all:function(name){return load(name).rows},
+    insert:function(name,o){var t=load(name),r=t.g.appendRows([toArr(t,o)]),x=Object.assign({},o,{_row:r});t.rows.push(x);return x},
+    insertMany:function(name,list){if(!list.length)return;var t=load(name),r=t.g.appendRows(list.map(function(o){return toArr(t,o)}));list.forEach(function(o,i){t.rows.push(Object.assign({},o,{_row:r+i}))})},
+    update:function(name,row,patch){var t=load(name),x=t.rows.find(function(r){return r._row===row._row});if(!x)throw new Error("Row not found in "+name);Object.assign(x,patch);t.g.setRow(x._row,toArr(t,x));return x},
+    remove:function(name,row){var t=load(name);t.g.deleteRow(row._row);t.rows=t.rows.filter(function(r){return r._row!==row._row});t.rows.forEach(function(r){if(r._row>row._row)r._row--})}
+  };
+}
+
+function arivuCore(db,env){
+  var SAFE=["id","role","name","email","phone","status","studentCode","createdAt","lastLogin"];
+  var DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  var PW_ROUNDS=300,SESSION_DAYS=7;
+  function err(m){var e=new Error(m);e.user=true;return e}
+  function S(v,max){return String(v===undefined||v===null?"":v).trim().slice(0,max||200)}
+  var isDate=function(s){return /^\d{4}-\d{2}-\d{2}$/.test(s)};
+  var isTime=function(s){return /^([01]\d|2[0-3]):[0-5]\d$/.test(s)};
+  var isUrl=function(s){return /^https?:\/\/[^\s<>"]+$/i.test(s)};
+  var okEmail=function(s){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)};
+  function strip(r){var o={};for(var k in r)if(k!=="_row")o[k]=r[k];return o}
+  function safeUser(u){var o={};SAFE.forEach(function(k){o[k]=u[k]===undefined?"":u[k]});return o}
+  function byId(t,id){return db.all(t).find(function(r){return String(r.id)===String(id)})}
+  function nextId(t,prefix){var max=0;db.all(t).forEach(function(r){var n=parseInt(String(r.id).replace(/\D/g,""),10);if(n>max)max=n});return prefix+String(max+1).padStart(4,"0")}
+  function hashPw(pw,salt){var h=env.hash(salt+":"+pw);for(var i=0;i<PW_ROUNDS;i++)h=env.hash(h+salt);return h}
+  function checkPw(pw){if(String(pw||"").length<6)throw err("The password needs at least 6 characters.")}
+  function batchOf(id){var b=byId("Batches",id);if(!b)throw err("Batch not found.");return b}
+  function ownBatch(u,batchId){var b=batchOf(batchId);if(u.role==="faculty"&&b.facultyId!==u.id)throw err("This batch isn't assigned to you.");return b}
+  function needDate(d,label){if(!isDate(d))throw err("Choose a valid "+(label||"date")+".");return d}
+  function link(u,label,required){u=S(u,500);if(!u&&!required)return "";if(!isUrl(u))throw err("Enter a full "+(label||"link")+" starting with https://");return u}
+
+  /* ---------- Sessions ---------- */
+  function sessionUser(token){
+    if(!token)throw err("Please log in again.");
+    var s=db.all("Sessions").find(function(r){return r.token===token});
+    if(!s||s.expires<env.now())throw err("Your session has expired. Please log in again.");
+    var u=byId("Users",s.userId);
+    if(!u||u.status!=="active")throw err("This account is not active. Please log in again.");
+    return u;
+  }
+  function dropSessions(userId){db.all("Sessions").filter(function(s){return s.userId===userId}).slice().forEach(function(s){db.remove("Sessions",s)})}
+  function pruneSessions(){var now=env.now();db.all("Sessions").filter(function(s){return s.expires<now}).slice(0,25).forEach(function(s){db.remove("Sessions",s)})}
+
+  /* ---------- What each role can see ---------- */
+  function boot(u){
+    var users=db.all("Users"),batches=db.all("Batches"),enr=db.all("Enrollments").filter(function(e){return e.status!=="removed"});
+    var att=db.all("Attendance"),topics=db.all("Topics"),recs=db.all("Recordings"),notes=db.all("Notes"),events=db.all("Events"),leaves=db.all("Leaves"),certs=db.all("Certificates");
+    var nameOf=function(id){var x=users.find(function(r){return r.id===id});return x?x.name:""};
+    var inB=function(ids){return function(r){return ids.indexOf(r.batchId)>=0}};
+    var base={me:safeUser(u),serverToday:env.today()};
+    if(u.role==="admin"){
+      return Object.assign(base,{users:users.map(safeUser),batches:batches.map(strip),enrollments:enr.map(strip),attendance:att.map(strip),topics:topics.map(strip),
+        recordings:recs.map(strip),notes:notes.map(strip),events:events.map(strip),leaves:leaves.map(strip),certificates:certs.map(strip),
+        leads:db.all("Leads").slice(-400).reverse().map(function(r){return Object.assign(strip(r),{id:r._row})})});
+    }
+    if(u.role==="faculty"){
+      var my=batches.filter(function(b){return b.facultyId===u.id}),ids=my.map(function(b){return b.id});
+      var en=enr.filter(inB(ids)),sIds=en.map(function(e){return e.studentId});
+      return Object.assign(base,{batches:my.map(strip),enrollments:en.map(strip),
+        users:[safeUser(u)].concat(users.filter(function(x){return sIds.indexOf(x.id)>=0}).map(function(x){return{id:x.id,role:x.role,name:x.name,studentCode:x.studentCode,phone:x.phone,email:x.email,status:x.status}})),
+        attendance:att.filter(inB(ids)).map(strip),topics:topics.filter(inB(ids)).map(strip),recordings:recs.filter(inB(ids)).map(strip),notes:notes.filter(inB(ids)).map(strip),
+        events:events.filter(function(e){return !e.batchId||ids.indexOf(e.batchId)>=0}).map(strip),
+        leaves:leaves.filter(function(l){return l.userId===u.id}).map(strip)});
+    }
+    var mine=enr.filter(function(e){return e.studentId===u.id}),bIds=mine.map(function(e){return e.batchId});
+    var myB=batches.filter(function(b){return bIds.indexOf(b.id)>=0}).map(function(b){return Object.assign(strip(b),{facultyName:nameOf(b.facultyId)})});
+    var fac=myB.map(function(b){return b.facultyId});
+    return Object.assign(base,{enrollments:mine.map(strip),batches:myB,
+      attendance:att.filter(function(a){return a.studentId===u.id}).map(strip),
+      topics:topics.filter(inB(bIds)).map(strip),recordings:recs.filter(inB(bIds)).map(strip),notes:notes.filter(inB(bIds)).map(strip),
+      events:events.filter(function(e){return !e.batchId||bIds.indexOf(e.batchId)>=0}).map(strip),
+      leaves:leaves.filter(function(l){return l.status==="approved"&&fac.indexOf(l.userId)>=0}).map(function(l){return{id:l.id,userId:l.userId,from:l.from,to:l.to,status:"approved",facultyName:nameOf(l.userId)}}),
+      certificates:certs.filter(function(c){return c.studentId===u.id&&c.status==="issued"}).map(strip)});
+  }
+
+  /* ---------- Actions ---------- */
+  var A={},P={};
+  function def(name,perm,fn){A[name]=fn;P[name]=perm}
+  var ALL=["admin","faculty","student"],STAFF=["admin","faculty"],ADMIN=["admin"];
+
+  def("lead",{pub:1,write:1},function(q){
+    db.insert("Leads",{Received:env.now(),Name:S(q.name,80),Email:S(q.email,120),WhatsApp:q.phone?"+91 "+S(q.phone,15):"",Program:S(q.program||q.course,120),Source:S(q.src,80),Message:S(q.message,1000),Page:S(q.page,300),Status:"new"});
+    return{noBoot:1};
+  });
+  def("verify",{pub:1},function(q){
+    var no=S(q.certNo,40).toUpperCase();if(!no)throw err("Enter a certificate number.");
+    var c=db.all("Certificates").find(function(r){return String(r.certNo).toUpperCase()===no});
+    if(!c)return{found:false};
+    var u=byId("Users",c.studentId);
+    return{found:true,cert:{certNo:c.certNo,name:u?u.name:"",courseId:c.courseId,issueDate:c.issueDate,grade:c.grade,status:c.status}};
+  });
+  def("login",{pub:1,write:1},function(q){
+    var email=S(q.email,120).toLowerCase(),key="fail:"+email,fails=+(env.cacheGet(key)||0);
+    if(fails>=5)throw err("Too many wrong attempts. Try again in 15 minutes.");
+    var u=db.all("Users").find(function(r){return String(r.email).toLowerCase()===email});
+    if(!u||u.status!=="active"||hashPw(String(q.password||""),u.salt)!==u.passHash){env.cachePut(key,String(fails+1),900);throw err("Email or password is incorrect.")}
+    var token=env.uuid().replace(/-/g,"")+env.uuid().replace(/-/g,"");
+    db.insert("Sessions",{token:token,userId:u.id,expires:env.nowPlus(SESSION_DAYS),createdAt:env.now()});
+    db.update("Users",u,{lastLogin:env.now()});
+    pruneSessions();
+    return{token:token,data:boot(u)};
+  });
+  def("logout",{roles:ALL,write:1},function(q){var s=db.all("Sessions").find(function(r){return r.token===q.token});if(s)db.remove("Sessions",s);return{noBoot:1}});
+  def("bootstrap",{roles:ALL},function(){return{}});
+  def("changePassword",{roles:ALL,write:1},function(q,u){
+    if(hashPw(String(q.oldPassword||""),u.salt)!==u.passHash)throw err("Your current password is incorrect.");
+    checkPw(q.newPassword);var salt=env.uuid();db.update("Users",u,{salt:salt,passHash:hashPw(String(q.newPassword),salt)});return{};
+  });
+
+  /* Accounts (admin) */
+  function nextCode(){var y=env.today().slice(0,4),n=db.all("Users").filter(function(r){return String(r.studentCode).indexOf("ARV-"+y)===0}).length+1;return "ARV-"+y+"-"+String(n).padStart(4,"0")}
+  function enrollStudent(studentId,batchId){
+    var b=batchOf(batchId),ex=db.all("Enrollments").find(function(e){return e.studentId===studentId&&e.batchId===batchId});
+    if(ex){if(ex.status==="removed")db.update("Enrollments",ex,{status:"active",updatedAt:env.now()});else throw err("This student is already in that batch.");return}
+    db.insert("Enrollments",{id:nextId("Enrollments","E"),studentId:studentId,batchId:batchId,courseId:b.courseId,status:"active",progress:"0",remark:"",enrolledAt:env.now(),updatedAt:env.now()});
+  }
+  def("saveUser",{roles:ADMIN,write:1},function(q){
+    var role=S(q.role),name=S(q.name,80),email=S(q.email,120).toLowerCase(),phone=S(q.phone,15).replace(/\D/g,"");
+    if(["faculty","student"].indexOf(role)<0)throw err("Choose student or faculty.");
+    if(name.length<2)throw err("Enter the full name.");
+    if(!okEmail(email))throw err("Enter a valid email address.");
+    if(phone&&!/^\d{10}$/.test(phone))throw err("Enter a 10-digit mobile number.");
+    var clash=db.all("Users").find(function(r){return String(r.email).toLowerCase()===email&&r.id!==q.id});
+    if(clash)throw err("Another account already uses this email.");
+    if(q.id){
+      var x=byId("Users",q.id);if(!x||x.role==="admin")throw err("Account not found.");
+      var patch={name:name,email:email,phone:phone};
+      if(q.password){checkPw(q.password);patch.salt=env.uuid();patch.passHash=hashPw(String(q.password),patch.salt)}
+      db.update("Users",x,patch);return{};
+    }
+    checkPw(q.password);var salt=env.uuid(),id=nextId("Users","U");
+    db.insert("Users",{id:id,role:role,name:name,email:email,phone:phone,salt:salt,passHash:hashPw(String(q.password),salt),status:"active",studentCode:role==="student"?nextCode():"",createdAt:env.now(),lastLogin:""});
+    if(role==="student"&&q.batchId)enrollStudent(id,S(q.batchId));
+    return{newId:id};
+  });
+  def("setUserStatus",{roles:ADMIN,write:1},function(q){
+    var x=byId("Users",q.id);if(!x||x.role==="admin")throw err("Account not found.");
+    var st=q.status==="active"?"active":"removed";db.update("Users",x,{status:st});if(st!=="active")dropSessions(x.id);return{};
+  });
+
+  /* Batches (admin) */
+  def("saveBatch",{roles:ADMIN,write:1},function(q){
+    var courseId=S(q.courseId,30);if(!courseId)throw err("Choose a program.");
+    var facultyId=S(q.facultyId,20);
+    if(facultyId){var f=byId("Users",facultyId);if(!f||f.role!=="faculty"||f.status!=="active")throw err("Choose an active faculty member.")}
+    var days=S(q.days,60).split(",").map(function(d){return d.trim()}).filter(function(d){return DAYS.indexOf(d)>=0});
+    if(!days.length)throw err("Choose the class days.");
+    var st=S(q.startTime,5),et=S(q.endTime,5);if(!isTime(st)||!isTime(et)||et<=st)throw err("Enter a valid class start and end time.");
+    var sd=needDate(S(q.startDate,10),"start date"),ed=S(q.endDate,10);if(ed&&(!isDate(ed)||ed<sd))throw err("The end date must be after the start date.");
+    var rec={courseId:courseId,facultyId:facultyId,kind:S(q.kind,20)||"Weekday",days:days.join(","),startTime:st,endTime:et,startDate:sd,endDate:ed,mode:S(q.mode,60)||"Classroom & online",
+      meetingLink:link(q.meetingLink,"meeting link"),meetingInfo:S(q.meetingInfo,300),status:["upcoming","active","completed"].indexOf(q.status)>=0?q.status:"active"};
+    var mon=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+sd.slice(5,7)-1];
+    rec.name=S(q.name,60)||(courseId.toUpperCase()+"-"+mon+sd.slice(2,4)+"-"+(rec.kind==="Weekend"?"WE":"WD"));
+    if(q.id){var b=batchOf(q.id);db.update("Batches",b,rec);
+      if(b.courseId!==courseId)db.all("Enrollments").filter(function(e){return e.batchId===b.id}).forEach(function(e){db.update("Enrollments",e,{courseId:courseId})});return{}}
+    rec.id=nextId("Batches","B");rec.createdAt=env.now();db.insert("Batches",rec);return{newId:rec.id};
+  });
+  def("deleteBatch",{roles:ADMIN,write:1},function(q){
+    var b=batchOf(q.id);
+    if(db.all("Enrollments").some(function(e){return e.batchId===b.id&&e.status!=="removed"}))throw err("This batch still has students. Remove them first, or mark the batch completed.");
+    db.remove("Batches",b);return{};
+  });
+  def("enroll",{roles:ADMIN,write:1},function(q){var s=byId("Users",q.studentId);if(!s||s.role!=="student")throw err("Student not found.");enrollStudent(s.id,S(q.batchId));return{}});
+  def("saveEnrollment",{roles:ADMIN,write:1},function(q){
+    var e=byId("Enrollments",q.id);if(!e)throw err("Enrollment not found.");
+    var st=["active","completed","dropped","removed"].indexOf(q.status)>=0?q.status:e.status,p=Math.max(0,Math.min(100,parseInt(q.progress===undefined?e.progress:q.progress,10)||0));
+    db.update("Enrollments",e,{status:st,progress:String(p),remark:q.remark===undefined?e.remark:S(q.remark,300),updatedAt:env.now()});return{};
+  });
+
+  /* Teaching (faculty for own batches, admin for all) */
+  def("markAttendance",{roles:STAFF,write:1},function(q,u){
+    var b=ownBatch(u,q.batchId),date=needDate(S(q.date,10));
+    if(date>env.today())throw err("You can't mark attendance for a future date.");
+    var roster=db.all("Enrollments").filter(function(e){return e.batchId===b.id&&e.status!=="removed"}).map(function(e){return e.studentId});
+    var existing=db.all("Attendance").filter(function(a){return a.batchId===b.id&&a.date===date}),add=[],n=0;
+    var nid=parseInt(nextId("Attendance","A").slice(1),10);
+    (q.records||[]).forEach(function(r){
+      var sid=S(r.studentId,20),st=["P","A","L"].indexOf(r.status)>=0?r.status:"";if(!st||roster.indexOf(sid)<0)return;
+      var ex=existing.find(function(a){return a.studentId===sid});
+      if(ex){if(ex.status!==st)db.update("Attendance",ex,{status:st,markedBy:u.id,markedAt:env.now()})}
+      else add.push({id:"A"+String(nid++).padStart(4,"0"),batchId:b.id,date:date,studentId:sid,status:st,markedBy:u.id,markedAt:env.now()});
+      n++;
+    });
+    if(!n)throw err("Mark at least one student.");
+    db.insertMany("Attendance",add);return{saved:n};
+  });
+  def("saveTopic",{roles:STAFF,write:1},function(q,u){
+    var b=ownBatch(u,q.batchId),topic=S(q.topic,300);if(topic.length<3)throw err("Describe the topic covered.");
+    var rec={batchId:b.id,date:needDate(S(q.date,10)),module:S(q.module,4),topic:topic,notes:S(q.notes,600)};
+    if(q.id){var t=byId("Topics",q.id);if(!t||(u.role==="faculty"&&t.facultyId!==u.id))throw err("Topic not found.");db.update("Topics",t,rec);return{}}
+    rec.id=nextId("Topics","T");rec.facultyId=u.id;rec.createdAt=env.now();db.insert("Topics",rec);return{};
+  });
+  def("deleteTopic",{roles:STAFF,write:1},function(q,u){var t=byId("Topics",q.id);if(!t||(u.role==="faculty"&&t.facultyId!==u.id))throw err("Topic not found.");db.remove("Topics",t);return{}});
+  def("setProgress",{roles:STAFF,write:1},function(q,u){
+    var n=0;(q.items||[]).forEach(function(it){
+      var e=byId("Enrollments",it.enrollmentId);if(!e)return;ownBatch(u,e.batchId);
+      var p=Math.max(0,Math.min(100,parseInt(it.progress,10)||0)),patch={progress:String(p),remark:S(it.remark,300),updatedAt:env.now()};
+      if(u.role==="admin"&&["active","completed","dropped"].indexOf(it.status)>=0)patch.status=it.status;
+      db.update("Enrollments",e,patch);n++;
+    });
+    if(!n)throw err("Nothing to save.");return{saved:n};
+  });
+  def("saveEvent",{roles:STAFF,write:1},function(q,u){
+    var type=["holiday","announcement","class-off","extra-class","exam"].indexOf(q.type)>=0?q.type:"announcement";
+    var batchId=S(q.batchId,20);
+    if(u.role==="faculty"){if(!batchId)throw err("Choose one of your batches.");ownBatch(u,batchId);if(type==="holiday")throw err("Only the admin can declare holidays.")}
+    else if(batchId)batchOf(batchId);
+    var title=S(q.title,120);if(title.length<3)throw err("Enter a title.");
+    var d=needDate(S(q.date,10)),ed=S(q.endDate,10);if(ed&&(!isDate(ed)||ed<d))throw err("The end date must be on or after the start date.");
+    var rec={type:type,title:title,date:d,endDate:ed,batchId:batchId,details:S(q.details,600)};
+    if(q.id){var ev=byId("Events",q.id);if(!ev||(u.role==="faculty"&&ev.createdBy!==u.id))throw err("Notice not found.");db.update("Events",ev,rec);return{}}
+    rec.id=nextId("Events","N");rec.createdBy=u.id;rec.createdAt=env.now();db.insert("Events",rec);return{};
+  });
+  def("deleteEvent",{roles:STAFF,write:1},function(q,u){var ev=byId("Events",q.id);if(!ev||(u.role==="faculty"&&ev.createdBy!==u.id))throw err("Notice not found.");db.remove("Events",ev);return{}});
+
+  /* Leave (faculty applies, admin decides) */
+  def("applyLeave",{roles:["faculty"],write:1},function(q,u){
+    var f=needDate(S(q.from,10),"from date"),t=needDate(S(q.to,10)||f,"to date");if(t<f)throw err("The 'to' date must be on or after the 'from' date.");
+    var reason=S(q.reason,300);if(reason.length<3)throw err("Enter a reason.");
+    db.insert("Leaves",{id:nextId("Leaves","L"),userId:u.id,from:f,to:t,reason:reason,status:"pending",decidedBy:"",decidedAt:"",createdAt:env.now()});return{};
+  });
+  def("cancelLeave",{roles:["faculty"],write:1},function(q,u){var l=byId("Leaves",q.id);if(!l||l.userId!==u.id||l.status!=="pending")throw err("Only pending requests can be withdrawn.");db.remove("Leaves",l);return{}});
+  def("decideLeave",{roles:ADMIN,write:1},function(q,u){var l=byId("Leaves",q.id);if(!l)throw err("Request not found.");db.update("Leaves",l,{status:q.status==="approved"?"approved":"rejected",decidedBy:u.id,decidedAt:env.now()});return{}});
+
+  /* Class content (admin) */
+  def("saveRecording",{roles:ADMIN,write:1},function(q,u){
+    var b=batchOf(q.batchId),title=S(q.title,150);if(title.length<3)throw err("Enter a title.");
+    var rec={batchId:b.id,title:title,date:needDate(S(q.date,10)),module:S(q.module,4),url:link(q.url,"video link",true)};
+    if(q.id){var r=byId("Recordings",q.id);if(!r)throw err("Recording not found.");db.update("Recordings",r,rec);return{}}
+    rec.id=nextId("Recordings","R");rec.addedBy=u.id;rec.createdAt=env.now();db.insert("Recordings",rec);return{};
+  });
+  def("deleteRecording",{roles:ADMIN,write:1},function(q){var r=byId("Recordings",q.id);if(!r)throw err("Recording not found.");db.remove("Recordings",r);return{}});
+  def("saveNote",{roles:ADMIN,write:1},function(q,u){
+    var b=batchOf(q.batchId),title=S(q.title,150);if(title.length<3)throw err("Enter a title.");
+    var rec={batchId:b.id,title:title,url:link(q.url,"file link",true),kind:S(q.kind,30)||"Notes",date:S(q.date,10)||env.today()};
+    if(q.id){var r=byId("Notes",q.id);if(!r)throw err("Note not found.");db.update("Notes",r,rec);return{}}
+    rec.id=nextId("Notes","M");rec.addedBy=u.id;rec.createdAt=env.now();db.insert("Notes",rec);return{};
+  });
+  def("deleteNote",{roles:ADMIN,write:1},function(q){var r=byId("Notes",q.id);if(!r)throw err("Note not found.");db.remove("Notes",r);return{}});
+
+  /* Certificates (admin issues; student downloads; anyone can verify) */
+  def("issueCertificate",{roles:ADMIN,write:1},function(q,u){
+    var e=byId("Enrollments",q.enrollmentId);if(!e)throw err("Choose a student enrolment.");
+    var dup=db.all("Certificates").find(function(c){return c.studentId===e.studentId&&c.courseId===e.courseId&&c.status==="issued"});
+    if(dup)throw err("This student already has a certificate for this program ("+dup.certNo+").");
+    var d=needDate(S(q.issueDate,10)||env.today(),"issue date"),yy=d.slice(2,4);
+    var code=String(e.courseId).toUpperCase().replace(/[^A-Z]/g,"").slice(0,4)||"ARV";
+    var seq=db.all("Certificates").filter(function(c){return String(c.certNo).indexOf("ARV-"+yy+"-")===0}).length+1;
+    var certNo="ARV-"+yy+"-"+code+"-"+String(seq).padStart(4,"0");
+    db.insert("Certificates",{id:nextId("Certificates","C"),certNo:certNo,studentId:e.studentId,courseId:e.courseId,batchId:e.batchId,issueDate:d,grade:S(q.grade,30),status:"issued",issuedBy:u.id,createdAt:env.now()});
+    db.update("Enrollments",e,{status:"completed",progress:"100",updatedAt:env.now()});
+    return{certNo:certNo};
+  });
+  def("setCertificateStatus",{roles:ADMIN,write:1},function(q){var c=byId("Certificates",q.id);if(!c)throw err("Certificate not found.");db.update("Certificates",c,{status:q.status==="issued"?"issued":"revoked"});return{}});
+
+  /* Leads (admin) */
+  def("updateLead",{roles:ADMIN,write:1},function(q){var row=parseInt(q.id,10),l=db.all("Leads").find(function(r){return r._row===row});if(!l)throw err("Lead not found.");db.update("Leads",l,{Status:S(q.status,30)});return{}});
+
+  function handle(q){
+    q=q||{};
+    try{
+      var fn=A[q.action],perm=P[q.action];if(!fn)throw err("Unknown request.");
+      var run=function(){
+        var u=null;
+        if(!perm.pub){u=sessionUser(q.token);if(perm.roles.indexOf(u.role)<0)throw err("Your account doesn't have access to this.")}
+        var r=fn(q,u)||{};
+        if(u&&!r.noBoot&&!r.data)r.data=boot(byId("Users",u.id));
+        delete r.noBoot;return Object.assign({ok:true},r);
+      };
+      return perm.write?env.lock(run):run();
+    }catch(e){return{ok:false,error:e&&e.user?e.message:"Something went wrong on the server. Please try again."+(e&&e.message?" ("+e.message+")":"")}}
+  }
+  /* First-time setup: creates every tab with headers, and the first admin account */
+  function setup(admin){
+    Object.keys(ARIVU_SCHEMA).forEach(function(t){db.all(t)});
+    var has=db.all("Users").some(function(u){return u.role==="admin"&&u.status==="active"});
+    if(has)return "Sheets are ready. An admin account already exists.";
+    var email=S(admin.email,120).toLowerCase();if(!okEmail(email))throw new Error("Set a valid ADMIN_EMAIL first.");checkPw(admin.password);
+    var salt=env.uuid();
+    db.insert("Users",{id:nextId("Users","U"),role:"admin",name:S(admin.name,80)||"Admin",email:email,phone:"",salt:salt,passHash:hashPw(String(admin.password),salt),status:"active",studentCode:"",createdAt:env.now(),lastLogin:""});
+    return "Sheets are ready. Admin account created for "+email+". Log in on the website and change the password.";
+  }
+  return{handle:handle,setup:setup,_internal:{hashPw:hashPw,nextId:nextId,enrollStudent:enrollStudent}};
+}
+
+/* Sample data for the preview (demo mode) and for automated tests. Never used on the live site. */
+function seedDemo(app,today){
+  var day=function(n){var d=new Date(today+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var call=function(action,q,token){var r=app.handle(Object.assign({action:action,token:token},q||{}));if(!r.ok)throw new Error(action+": "+r.error);return r};
+  app.setup({name:"Admin",email:"admin@arivu.in",password:"admin123"});
+  var A=call("login",{email:"admin@arivu.in",password:"admin123"}).token;
+  var fac=[["V. Vasanthan","vasanthan@arivu.in","9000000001"],["Sandhosh","sandhosh@arivu.in","9000000002"]].map(function(f){return call("saveUser",{role:"faculty",name:f[0],email:f[1],phone:f[2],password:"faculty123"},A).newId});
+  var batches=[
+    {courseId:"aie",facultyId:fac[0],kind:"Weekend",days:"Sat,Sun",startTime:"10:00",endTime:"15:00",startDate:day(-30),mode:"Classroom (Puducherry) & online",meetingLink:"https://zoom.us/j/1234567890",meetingInfo:"Meeting ID 123 456 7890 · Passcode ARIVU"},
+    {courseId:"pbi",facultyId:fac[1],kind:"Weekday",days:"Mon,Tue,Wed,Thu",startTime:"19:00",endTime:"21:00",startDate:day(-24),mode:"Online",meetingLink:"https://meet.google.com/abc-defg-hij",meetingInfo:"Google Meet · join 5 minutes early"},
+    {courseId:"dsml",facultyId:fac[0],kind:"Weekday",days:"Mon,Tue,Wed,Thu,Fri",startTime:"07:00",endTime:"09:00",startDate:day(-16),mode:"Classroom (Villupuram) & online",meetingLink:"https://zoom.us/j/9876543210",meetingInfo:"Meeting ID 987 654 3210 · Passcode DS2026"},
+    {courseId:"tab",facultyId:fac[1],kind:"Weekend",days:"Sat,Sun",startTime:"10:00",endTime:"13:00",startDate:day(-80),endDate:day(-45),mode:"Online",meetingLink:"",meetingInfo:"",status:"completed"}
+  ].map(function(b){return call("saveBatch",b,A).newId});
+  var st=[["Priya Raman","priya@example.com","9876543210",[0,1,3]],["Karthik S","karthik@example.com","9443012345",[2,0]],["Divya M","divya.m@example.com","9600112233",[1]],["Arun Kumar","arunk@example.com","9789001122",[2]],["Fathima B","fathima.b@example.com","9940556677",[1]]]
+    .map(function(s){var id=call("saveUser",{role:"student",name:s[0],email:s[1],phone:s[2],password:"student123"},A).newId;s[3].forEach(function(b){call("enroll",{studentId:id,batchId:batches[b]},A)});return id});
+  /* Attendance for past class days */
+  var boot=call("bootstrap",{},A).data,pat=["P","P","P","A","P","P","L","P","P","P","P","A"];
+  boot.batches.forEach(function(b,bi){
+    var roster=boot.enrollments.filter(function(e){return e.batchId===b.id}).map(function(e){return e.studentId});
+    for(var n=-35,k=0;n<=-1;n++){var d=day(n);if(d<b.startDate||(b.endDate&&d>b.endDate)||b.days.indexOf(DOW[new Date(d+"T00:00:00Z").getUTCDay()])<0)continue;
+      call("markAttendance",{batchId:b.id,date:d,records:roster.map(function(s,i){return{studentId:s,status:pat[(k+i*5+bi)%pat.length]}})},A);k++}
+  });
+  var T=function(b,n,m,t,notes){call("saveTopic",{batchId:batches[b],date:day(n),module:String(m),topic:t,notes:notes||""},A)};
+  T(0,-29,0,"Python setup, variables, data types and control flow","Practice set 1 shared in Notes");T(0,-23,0,"Functions, comprehensions and error handling");T(0,-16,1,"SQL joins and aggregations on the retail database");T(0,-9,1,"Window functions and pandas merges");T(0,-2,2,"Descriptive statistics and distributions","Bring the churn dataset next class");
+  T(1,-24,0,"Power BI tour and Power Query basics");T(1,-21,0,"Merging and appending sales files");T(1,-17,1,"Star schema and relationships");T(1,-10,2,"DAX: SUM, DIVIDE, SUMX and CALCULATE");T(1,-3,3,"Time intelligence: YTD and same period last year");
+  T(2,-16,0,"Python setup and data types");T(2,-9,0,"OOP basics and file handling");T(2,-2,1,"NumPy arrays and vectorised operations");
+  var demo="https://drive.google.com/file/d/DEMO_RECORDING/view";
+  [[0,-23,0,"Python for AI engineering · Day 2"],[0,-16,1,"SQL joins in practice"],[0,-9,1,"Window functions and pandas merges"],[1,-21,0,"Power Query: merging sources"],[1,-17,1,"Building a star schema"],[1,-10,2,"CALCULATE and filter context"],[2,-9,0,"OOP and file handling"]]
+    .forEach(function(r){call("saveRecording",{batchId:batches[r[0]],date:day(r[1]),module:String(r[2]),title:r[3],url:demo},A)});
+  [[0,"Python practice set 1","Assignment"],[0,"SQL cheat sheet","Notes"],[1,"DAX formula reference","Notes"],[1,"Sales dataset (Excel)","Dataset"],[2,"NumPy and pandas notes","Notes"]]
+    .forEach(function(n){call("saveNote",{batchId:batches[n[0]],title:n[1],kind:n[2],url:"https://drive.google.com/file/d/DEMO_NOTES/view",date:day(-5)},A)});
+  call("saveEvent",{type:"holiday",title:"Institute holiday",date:day(9),details:"No classes for any batch. Sample holiday added by the admin."},A);
+  call("saveEvent",{type:"announcement",title:"Mock interview week",date:day(4),endDate:day(8),details:"Book your slot with your mentor. Resume reviews run all week."},A);
+  call("saveEvent",{type:"extra-class",title:"Doubt-clearing session",date:day(2),batchId:batches[0],details:"Optional extra session on statistics, 6:00 to 7:30 PM, same meeting link."},A);
+  var F=call("login",{email:"sandhosh@arivu.in",password:"faculty123"}).token;
+  call("applyLeave",{from:day(3),to:day(3),reason:"Conducting a corporate workshop"},F);
+  call("applyLeave",{from:day(15),to:day(16),reason:"Personal work"},F);
+  boot=call("bootstrap",{},A).data;
+  var lv=boot.leaves.find(function(l){return l.from===day(3)});call("decideLeave",{id:lv.id,status:"approved"},A);
+  call("setProgress",{items:boot.enrollments.filter(function(e){return e.batchId!==batches[3]}).map(function(e,i){return{enrollmentId:e.id,progress:String([42,35,18,40,22,30,15,36][i%8]),remark:i%3===0?"Good pace. Keep practising SQL.":""}})},A);
+  var done=boot.enrollments.find(function(e){return e.batchId===batches[3]});
+  call("issueCertificate",{enrollmentId:done.id,grade:"Distinction",issueDate:day(-40)},A);
+  [["Divya M","divya.m@example.com","9600112233","MLOps & LLMOps","Brochure"],["Arun Kumar","arunk@example.com","9789001122","Supply Chain Analytics & Management","Free demo · Weekend · classroom"],["Fathima B","fathima.b@example.com","9940556677","Digital Marketing Professional","Contact · Villupuram · Weekday"]]
+    .forEach(function(l){call("lead",{name:l[0],email:l[1],phone:l[2],program:l[3],src:l[4],page:"demo"})});
+  call("logout",{},F);call("logout",{},A);
+}
+
+/* ---------- Certificate: one layout used for the on-page preview (SVG) and the download (canvas → PDF/PNG) ---------- */
+const SITE_HOST=CONFIG.siteUrl.replace(/^https?:\/\//,"").replace(/\/$/,"");
+function certData(c,o={}){
+  const tr=c.trainer&&TRAINERS[c.trainer],lang=c.track==="lang";
+  return{name:o.name||"Your Name",title:c.title,detail:`${c.hours} hours of live training · ${c.modules.length} ${lang?"units":"hands-on labs"} · ${lang?"final assessment":"capstone project"}${o.grade?" · Grade: "+o.grade:""}`,
+    sign:tr?tr.name:"Lead Trainer",signRole:tr?"Program Trainer":"Arivu Faculty",
+    foot:o.certNo?`No. ${o.certNo} · Issued ${fmtShort(o.issueDate)} · Verify at ${SITE_HOST}/#verify`:`No. ARV-XX-${c.id.toUpperCase().slice(0,4)}-XXXX · SAMPLE`,sample:!o.certNo};
+}
+const fmtShort=iso=>iso?new Date(iso.slice(0,10)+"T00:00:00Z").toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"";
+const fmtLong=iso=>iso?new Date(iso.slice(0,10)+"T00:00:00Z").toLocaleDateString("en-IN",{day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}):"";
+function certSVG(c,o={}){
+  const k="ct"+(uid++),d=certData(c,o),fs=d.title.length>40?22:d.title.length>30?25:28;
+  return`<svg class="cert-svg" viewBox="0 0 800 560" role="img" aria-label="${d.sample?"Sample certificate":"Certificate"} for ${esc(c.title)}"><defs>
+  <linearGradient id="${k}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a4f"/><stop offset="1" stop-color="#1f4ae0"/></linearGradient>
+  <linearGradient id="${k}o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#ffb703"/><stop offset="1" stop-color="#ff6a2b"/></linearGradient>
+  <pattern id="${k}p" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#1f4ae0" opacity=".07"/></pattern></defs>
+  <rect width="800" height="560" rx="18" fill="#fff"/><rect width="800" height="560" rx="18" fill="url(#${k}p)"/>
+  <path d="M0 18 A18 18 0 0 1 18 0 H170 L0 150 Z" fill="url(#${k}g)"/><path d="M0 150 L170 0 H198 L0 175Z" fill="#ffb703" opacity=".9"/>
+  <path d="M800 542 A18 18 0 0 1 782 560 H660 L800 440 Z" fill="url(#${k}g)"/><path d="M800 440 L660 560 H632 L800 416Z" fill="#ff6a2b" opacity=".9"/>
+  <rect x="22" y="22" width="756" height="516" rx="10" fill="none" stroke="#c9d3f5" stroke-width="1.2"/>
+  <g transform="translate(376,36)">${logoSVG(48)}</g>
+  <text x="400" y="112" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="#0b1a4f">ARIVU INSTITUTE OF AI &amp; ANALYTICS</text>
+  <text x="400" y="131" text-anchor="middle" font-family="Mulish,sans-serif" font-size="11.5" font-weight="700" fill="#c2410c">In collaboration with SRM Infotech, Pondicherry</text>
+  <text x="400" y="178" text-anchor="middle" font-family="Poppins,sans-serif" font-size="36" font-weight="800" fill="#0b1a4f">Certificate of Completion</text>
+  <text x="400" y="212" text-anchor="middle" font-family="Mulish,sans-serif" font-size="15" fill="#5a6488">This is to certify that</text>
+  <text x="400" y="264" text-anchor="middle" font-family="Poppins,sans-serif" font-size="34" font-weight="700" fill="#1f4ae0">${esc(d.name)}</text>
+  <line x1="220" x2="580" y1="282" y2="282" stroke="#ffb703" stroke-width="2"/>
+  <text x="400" y="314" text-anchor="middle" font-family="Mulish,sans-serif" font-size="15" fill="#5a6488">has successfully completed the program</text>
+  <text x="400" y="354" text-anchor="middle" font-family="Poppins,sans-serif" font-size="${fs}" font-weight="800" fill="#0b1a4f">${esc(d.title)}</text>
+  <text x="400" y="386" text-anchor="middle" font-family="Mulish,sans-serif" font-size="13.5" font-weight="700" fill="#5a6488">${esc(d.detail)}</text>
+  <line x1="140" x2="320" y1="466" y2="466" stroke="#0b1a4f"/><text x="230" y="486" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="#0b1a4f">${esc(d.sign)}</text><text x="230" y="503" text-anchor="middle" font-family="Mulish,sans-serif" font-size="12" fill="#5a6488">${esc(d.signRole)}</text>
+  <line x1="480" x2="660" y1="466" y2="466" stroke="#0b1a4f"/><text x="570" y="486" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="#0b1a4f">Director</text><text x="570" y="503" text-anchor="middle" font-family="Mulish,sans-serif" font-size="12" fill="#5a6488">Arivu Institute of AI &amp; Analytics</text>
+  <g transform="translate(400,462)"><circle r="44" fill="url(#${k}o)"/><circle r="36" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="3 3"/><text y="-4" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" fill="#fff">ARIVU</text><text y="14" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" font-weight="700" fill="#fff">CERTIFIED</text></g>
+  <text x="400" y="532" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9.5" fill="#8a94b8">${esc(d.foot)}</text>
+  ${d.sample?`<text x="400" y="300" text-anchor="middle" font-family="Poppins,sans-serif" font-size="110" font-weight="800" fill="#1f4ae0" opacity=".05" transform="rotate(-18 400 300)">SAMPLE</text>`:""}</svg>`;
+}
+async function certCanvas(c,o={}){
+  try{await document.fonts.ready}catch(e){}
+  const d=certData(c,o),SC=2.5,cv=document.createElement("canvas");cv.width=800*SC;cv.height=560*SC;
+  const x=cv.getContext("2d");x.scale(SC,SC);
+  const grad=(a,b)=>{const g=x.createLinearGradient(0,0,800,560);g.addColorStop(0,a);g.addColorStop(1,b);return g};
+  const poly=(pts,fill)=>{x.beginPath();pts.forEach(([px,py],i)=>i?x.lineTo(px,py):x.moveTo(px,py));x.closePath();x.fillStyle=fill;x.fill()};
+  const T=(s,y,font,color,ls=0,cx=400)=>{x.font=font;x.fillStyle=color;x.textAlign="center";x.textBaseline="alphabetic";if(ls&&"letterSpacing" in x){x.letterSpacing=ls+"px";x.fillText(s,cx+ls/2,y);x.letterSpacing="0px"}else x.fillText(s,cx,y)};
+  x.fillStyle="#fff";x.fillRect(0,0,800,560);x.save();x.beginPath();x.rect(0,0,800,560);x.clip();
+  x.fillStyle="rgba(31,74,224,.07)";for(let i=0;i<45;i++)for(let j=0;j<32;j++){x.beginPath();x.arc(2+i*18,2+j*18,1,0,7);x.fill()}
+  const navy=grad("#0b1a4f","#1f4ae0");
+  poly([[0,0],[170,0],[0,150]],navy);poly([[0,150],[170,0],[198,0],[0,175]],"rgba(255,183,3,.9)");
+  poly([[800,560],[660,560],[800,440]],navy);poly([[800,440],[660,560],[632,560],[800,416]],"rgba(255,106,43,.9)");
+  x.restore();
+  x.strokeStyle="#c9d3f5";x.lineWidth=1.2;x.beginPath();x.roundRect?x.roundRect(22,22,756,516,10):x.rect(22,22,756,516);x.stroke();
+  await new Promise(res=>{const im=new Image();im.onload=()=>{x.drawImage(im,376,36,48,48);res()};im.onerror=res;im.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(logoSVG(48).replace("<svg ",'<svg xmlns="http://www.w3.org/2000/svg" '))});
+  const P="Poppins, 'Segoe UI', sans-serif",M="Mulish, 'Segoe UI', sans-serif";
+  T("ARIVU INSTITUTE OF AI & ANALYTICS",112,`800 13px ${P}`,"#0b1a4f",3);
+  T("In collaboration with SRM Infotech, Pondicherry",131,`700 11.5px ${M}`,"#c2410c");
+  T("Certificate of Completion",178,`800 36px ${P}`,"#0b1a4f");
+  T("This is to certify that",212,`400 15px ${M}`,"#5a6488");
+  let ns=34;x.font=`700 ${ns}px ${P}`;while(x.measureText(d.name).width>560&&ns>20){ns--;x.font=`700 ${ns}px ${P}`}
+  T(d.name,264,`700 ${ns}px ${P}`,"#1f4ae0");
+  x.strokeStyle="#ffb703";x.lineWidth=2;x.beginPath();x.moveTo(220,282);x.lineTo(580,282);x.stroke();
+  T("has successfully completed the program",314,`400 15px ${M}`,"#5a6488");
+  let ts=d.title.length>40?22:d.title.length>30?25:28;x.font=`800 ${ts}px ${P}`;while(x.measureText(d.title).width>700&&ts>16){ts--;x.font=`800 ${ts}px ${P}`}
+  T(d.title,354,`800 ${ts}px ${P}`,"#0b1a4f");
+  T(d.detail,386,`700 13.5px ${M}`,"#5a6488");
+  x.strokeStyle="#0b1a4f";x.lineWidth=1;[[140,320],[480,660]].forEach(([a,b])=>{x.beginPath();x.moveTo(a,466);x.lineTo(b,466);x.stroke()});
+  T(d.sign,486,`700 14px ${P}`,"#0b1a4f",0,230);T(d.signRole,503,`400 12px ${M}`,"#5a6488",0,230);
+  T("Director",486,`700 14px ${P}`,"#0b1a4f",0,570);T("Arivu Institute of AI & Analytics",503,`400 12px ${M}`,"#5a6488",0,570);
+  const sg=x.createLinearGradient(356,418,444,506);sg.addColorStop(0,"#ffe08a");sg.addColorStop(.5,"#ffb703");sg.addColorStop(1,"#ff6a2b");
+  x.fillStyle=sg;x.beginPath();x.arc(400,462,44,0,7);x.fill();
+  x.setLineDash([3,3]);x.strokeStyle="#fff";x.lineWidth=1.5;x.beginPath();x.arc(400,462,36,0,7);x.stroke();x.setLineDash([]);
+  T("ARIVU",458,`800 11px ${P}`,"#fff",1.5);T("CERTIFIED",476,`700 10px ${P}`,"#fff");
+  T(d.foot,532,`500 9.5px 'JetBrains Mono', ui-monospace, monospace`,"#8a94b8");
+  if(d.sample){x.save();x.translate(400,300);x.rotate(-18*Math.PI/180);x.globalAlpha=.05;T("SAMPLE",0,`800 110px ${P}`,"#1f4ae0",0,0);x.restore()}
+  return cv;
+}
+/* Tiny PDF writer: one page with the certificate as a JPEG. No external library needed. */
+function canvasToPDF(cv){
+  const jpg=atob(cv.toDataURL("image/jpeg",.92).split(",")[1]),img=new Uint8Array(jpg.length);for(let i=0;i<jpg.length;i++)img[i]=jpg.charCodeAt(i);
+  const W=842,H=Math.round(842*cv.height/cv.width),enc=s=>new TextEncoder().encode(s),parts=[],offs=[];let len=0;
+  const add=p=>{const b=typeof p==="string"?enc(p):p;parts.push(b);len+=b.length};
+  const obj=(n,body)=>{offs[n]=len;add(`${n} 0 obj\n`);(Array.isArray(body)?body:[body]).forEach(add);add("\nendobj\n")};
+  add("%PDF-1.4\n%\xE2\xE3\xCF\xD3\n");
+  obj(1,"<< /Type /Catalog /Pages 2 0 R >>");
+  obj(2,"<< /Type /Pages /Kids [3 0 R] /Count 1 >>");
+  obj(3,`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>`);
+  obj(4,[`<< /Type /XObject /Subtype /Image /Width ${cv.width} /Height ${cv.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${img.length} >>\nstream\n`,img,"\nendstream"]);
+  const cs=`q ${W} 0 0 ${H} 0 0 cm /Im0 Do Q`;obj(5,`<< /Length ${cs.length} >>\nstream\n${cs}\nendstream`);
+  const x=len;add(`xref\n0 6\n0000000000 65535 f \n${[1,2,3,4,5].map(n=>String(offs[n]).padStart(10,"0")+" 00000 n \n").join("")}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${x}\n%%EOF\n`);
+  return new Blob(parts,{type:"application/pdf"});
+}
+function saveBlob(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},4000)}
+async function downloadCert(c,o,kind){
+  try{
+    const cv=await certCanvas(c,o),base=`Arivu-Certificate-${(o.certNo||"Sample-"+c.id).replace(/[^\w-]/g,"")}`;
+    if(kind==="png")cv.toBlob(b=>saveBlob(b,base+".png"),"image/png");else saveBlob(canvasToPDF(cv),base+".pdf");
+    toast(LIVE?"Certificate downloaded":"Certificate ready. Downloads may be blocked in this preview; they work on your live site.");
+  }catch(e){toast("Couldn't create the certificate file: "+e.message)}
+}
+function openCertModal(c,o){
+  $("#layer").innerHTML=`<div class="backdrop" data-close><div class="modal bro" role="dialog" aria-modal="true" aria-labelledby="cmh">
+    <div class="bro-head"><h2 id="cmh" style="font-size:22px">${o.certNo?(D&&state.db&&state.db.me.role!=="student"?"Certificate":"Your certificate"):"Sample certificate"}</h2><button class="xbtn" data-close-btn aria-label="Close">✕</button></div>
+    <div>${certSVG(c,o)}</div>
+    <p style="margin:0;color:var(--muted);font-size:14px">${o.certNo?`Certificate No. <b>${esc(o.certNo)}</b>. Anyone can check it on the <a href="#verify-${esc(o.certNo)}" data-close-btn>verification page</a>.`:"Your name, grade, certificate number and issue date are added when you complete the program."}</p>
+    <div class="row"><button class="btn btn-flame" data-certdl="pdf">${I("download")} Download PDF</button><button class="btn btn-line" data-certdl="png">${I("download")} Download image</button></div>
+  </div></div>`;
+  state.certOpen={c,o};
+}
+
+async function paintCerts(){for(const im of $$("img[data-cert]")){if(im.dataset.done)continue;im.dataset.done="1";const c=course(im.dataset.cert);if(!c)continue;try{const cv=await certCanvas(c,{});if(im.isConnected)im.src=cv.toDataURL("image/jpeg",.88)}catch(e){}}}
 
 const pic=(key,c)=>state.photos[key]?`<img src="${state.photos[key]}" alt="${esc(c.title||"")}">`:c.img?`<img src="img/${c.img}.jpg" alt="${esc(c.title||"")}" style="object-position:${c.pos||"center"}" loading="lazy">`:mock(c);
 const NOPIC=new Set();
@@ -1401,8 +2019,8 @@ function renderNav(){
   const u=state.user,cur=state.route==="course"?"programs":state.route;
   $("#nav").innerHTML=NAV.map(([k,v])=>k==="programs"?`<button class="link" data-act="mega" aria-expanded="${state.mega}" aria-current="${cur===k?"page":"false"}">Programs <span aria-hidden="true">▾</span></button>`:`<button class="link" data-go="${k}" aria-current="${cur===k?"page":"false"}">${v}</button>`).join("")+
     `<button class="btn btn-flame btn-sm navdemo" data-act="enq">Free demo</button>`+
-    (u?`<button class="btn btn-navy btn-sm" data-go="portal">${u.role==="admin"?"Admin":"My learning"}</button><button class="link" data-act="logout">Log out</button>`:`<button class="btn btn-navy btn-sm" data-go="signin">Log in</button>`);
-  $("#mnav").innerHTML=NAV.map(([k,v])=>`<button data-go="${k}">${v}</button>`).join("")+`<button data-act="enq">Book a free demo</button>`+(u?`<button data-go="portal">${u.role==="admin"?"Admin panel":"My learning"}</button><button data-act="logout">Log out</button>`:`<button data-go="signin">Log in</button>`);
+    (u?`<button class="btn btn-navy btn-sm" data-go="portal">${{admin:"Admin panel",faculty:"Faculty portal",student:"My learning"}[u.role]}</button><button class="link" data-act="logout">Log out</button>`:`<button class="btn btn-navy btn-sm" data-go="signin">Log in</button>`);
+  $("#mnav").innerHTML=NAV.map(([k,v])=>`<button data-go="${k}">${v}</button>`).join("")+`<button data-act="enq">Book a free demo</button>`+(u?`<button data-go="portal">${{admin:"Admin panel",faculty:"Faculty portal",student:"My learning"}[u.role]}</button><button data-act="logout">Log out</button>`:`<button data-go="signin">Log in</button>`);
   $("#megaHost").innerHTML=state.mega?`<div class="mega"><div class="wrap">${Object.entries(TRACKS).map(([k,t])=>`<div><h4 style="--c:${t.color}"><i></i>${t.name}</h4>${COURSES.filter(c=>c.track===k).map(c=>`<button data-course="${c.id}">${esc(c.title)}${c.flag==="First in region"?I("trophy","tiny"):""}<small>${dur(c)}</small></button>`).join("")}</div>`).join("")}</div></div>`:"";
 }
 function renderFab(){
@@ -1542,32 +2160,472 @@ function courseFAQ(c){const lang=c.track==="lang";return[
  ["What if I miss a class?",HOME_FAQ[3][1]],
  ["Do I get a certificate and placement support?",`Yes. You receive the Arivu certificate for ${c.title} after the assessments and ${lang?"final test":"capstone"}, plus ${lang?"interview and career support":"an internship certificate and 100% placement support: resume reviews, mock interviews and referrals to 100+ partners"}.`]
 ]}
-function certSVG(c){
-  const k="ct"+(uid++),tr=c.trainer&&TRAINERS[c.trainer],fs=c.title.length>40?22:c.title.length>30?25:28;
-  return`<svg class="cert-svg" viewBox="0 0 800 560" role="img" aria-label="Sample certificate for ${esc(c.title)}"><defs>
-  <linearGradient id="${k}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1a4f"/><stop offset="1" stop-color="#1f4ae0"/></linearGradient>
-  <linearGradient id="${k}o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset=".5" stop-color="#ffb703"/><stop offset="1" stop-color="#ff6a2b"/></linearGradient>
-  <pattern id="${k}p" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#1f4ae0" opacity=".07"/></pattern></defs>
-  <rect width="800" height="560" rx="18" fill="#fff"/><rect width="800" height="560" rx="18" fill="url(#${k}p)"/>
-  <path d="M0 18 A18 18 0 0 1 18 0 H170 L0 150 Z" fill="url(#${k}g)"/><path d="M0 150 L170 0 H198 L0 175Z" fill="#ffb703" opacity=".9"/>
-  <path d="M800 542 A18 18 0 0 1 782 560 H660 L800 440 Z" fill="url(#${k}g)"/><path d="M800 440 L660 560 H632 L800 416Z" fill="#ff6a2b" opacity=".9"/>
-  <rect x="22" y="22" width="756" height="516" rx="10" fill="none" stroke="#c9d3f5" stroke-width="1.2"/>
-  <g transform="translate(376,40)">${logoSVG(48)}</g>
-  <text x="400" y="118" text-anchor="middle" font-family="Poppins,sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="#0b1a4f">ARIVU INSTITUTE OF AI &amp; ANALYTICS</text>
-  <text x="400" y="170" text-anchor="middle" font-family="Poppins,sans-serif" font-size="38" font-weight="800" fill="#0b1a4f">Certificate of Completion</text>
-  <text x="400" y="208" text-anchor="middle" font-family="Mulish,sans-serif" font-size="15" fill="#5a6488">This is to certify that</text>
-  <text x="400" y="262" text-anchor="middle" font-family="Poppins,sans-serif" font-size="36" font-weight="700" fill="#1f4ae0">Your Name</text>
-  <line x1="230" x2="570" y1="280" y2="280" stroke="#ffb703" stroke-width="2"/>
-  <text x="400" y="314" text-anchor="middle" font-family="Mulish,sans-serif" font-size="15" fill="#5a6488">has successfully completed the program</text>
-  <text x="400" y="356" text-anchor="middle" font-family="Poppins,sans-serif" font-size="${fs}" font-weight="800" fill="#0b1a4f">${esc(c.title)}</text>
-  <text x="400" y="388" text-anchor="middle" font-family="Mulish,sans-serif" font-size="14" font-weight="700" fill="#5a6488">${c.hours} hours of live training · ${c.modules.length} ${c.track==="lang"?"units":"hands-on labs"} · ${c.track==="lang"?"final assessment":"capstone project"}</text>
-  <line x1="140" x2="320" y1="468" y2="468" stroke="#0b1a4f"/><text x="230" y="488" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="#0b1a4f">${esc(tr?tr.name:"Lead Trainer")}</text><text x="230" y="506" text-anchor="middle" font-family="Mulish,sans-serif" font-size="12" fill="#5a6488">${tr?"Program Trainer":"Arivu Faculty"}</text>
-  <line x1="480" x2="660" y1="468" y2="468" stroke="#0b1a4f"/><text x="570" y="488" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="#0b1a4f">Director</text><text x="570" y="506" text-anchor="middle" font-family="Mulish,sans-serif" font-size="12" fill="#5a6488">Arivu Institute of AI &amp; Analytics</text>
-  <g transform="translate(400,462)"><circle r="44" fill="url(#${k}o)"/><circle r="36" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="3 3"/><text y="-4" text-anchor="middle" font-family="Poppins,sans-serif" font-size="11" font-weight="800" letter-spacing="1.5" fill="#fff">ARIVU</text><text y="14" text-anchor="middle" font-family="Poppins,sans-serif" font-size="10" font-weight="700" fill="#fff">CERTIFIED</text></g>
-  <text x="400" y="534" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#8a94b8">Certificate ID ARV-${c.id.toUpperCase()}-XXXX · SAMPLE</text></svg>`;
-}
 function phead(e,t,s){return`<section class="phead"><div class="wrap"><span class="eyebrow">${e}</span><h1>${t}</h1><p>${s}</p></div></section>`}
 const TOOLS="Python,SQL,TensorFlow,PyTorch,LangChain,LangGraph,MCP,OpenAI API,Claude API,MLflow,Docker,Kubernetes,FastAPI,Airflow,PySpark,Databricks,AWS,Power BI,Tableau,Excel,Google Ads,Meta Ads,GA4".split(",");
+
+/* =====================================================================
+   PORTAL: student, faculty and admin logins on the Google Sheet backend
+   ===================================================================== */
+const API_URL=(()=>{if(/^(localhost|127\.0\.0\.1)$/.test(HOST)){const m=location.search.match(/[?&]api=([^&]+)/);if(m)return decodeURIComponent(m[1])}return LIVE?CONFIG.api:""})();
+const DEMO=!API_URL&&!LIVE,PORTAL_OFF=!API_URL&&LIVE;
+const TOKEN_KEY="arivu.portal.token";
+const tokenStore={get(){try{return DEMO?null:localStorage.getItem(TOKEN_KEY)}catch(e){return null}},set(v){try{if(!DEMO)v?localStorage.setItem(TOKEN_KEY,v):localStorage.removeItem(TOKEN_KEY)}catch(e){}}};
+
+/* ---- Demo backend: the same core rules running in the browser on sample data ---- */
+function sha256(ascii){
+  const rr=(v,a)=>(v>>>a)|(v<<(32-a));let i,j,result="";const words=[],asciiBitLength=ascii.length*8;
+  const hash=sha256.h=sha256.h||[],k=sha256.k=sha256.k||[];let primeCounter=k.length;const isComposite={};
+  for(let candidate=2;primeCounter<64;candidate++){if(!isComposite[candidate]){for(i=0;i<313;i+=candidate)isComposite[i]=candidate;hash[primeCounter]=(Math.pow(candidate,.5)*4294967296)|0;k[primeCounter++]=(Math.pow(candidate,1/3)*4294967296)|0}}
+  let h=hash.slice(0,8);ascii+="\x80";while(ascii.length%64-56)ascii+="\x00";
+  for(i=0;i<ascii.length;i++){j=ascii.charCodeAt(i);words[i>>2]|=j<<((3-i)%4)*8}
+  words[words.length]=((asciiBitLength/Math.pow(2,32))|0);words[words.length]=asciiBitLength;
+  for(j=0;j<words.length;){const w=words.slice(j,j+=16),oldHash=h;h=h.slice(0,8);
+    for(i=0;i<64;i++){const w15=w[i-15],w2=w[i-2],a=h[0],e=h[4];
+      const temp1=h[7]+(rr(e,6)^rr(e,11)^rr(e,25))+((e&h[5])^((~e)&h[6]))+k[i]+(w[i]=(i<16)?w[i]:(w[i-16]+(rr(w15,7)^rr(w15,18)^(w15>>>3))+w[i-7]+(rr(w2,17)^rr(w2,19)^(w2>>>10)))|0);
+      const temp2=(rr(a,2)^rr(a,13)^rr(a,22))+((a&h[1])^(a&h[2])^(h[1]&h[2]));
+      h=[(temp1+temp2)|0].concat(h);h[4]=(h[4]+temp1)|0}
+    for(i=0;i<8;i++)h[i]=(h[i]+oldHash[i])|0}
+  for(i=0;i<8;i++)for(j=3;j+1;j--){const b=(h[i]>>(j*8))&255;result+=((b<16)?0:"")+b.toString(16)}
+  return result;
+}
+const localISO=(off=0)=>{const d=new Date(Date.now()+off*864e5),p=n=>String(n).padStart(2,"0");return`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`};
+const localNow=(off=0)=>{const d=new Date(Date.now()+off*864e5),p=n=>String(n).padStart(2,"0");return`${localISO(off)} ${p(d.getHours())}:${p(d.getMinutes())}`};
+let demoInst=null;
+function demoApp(){
+  if(demoInst)return demoInst;
+  const store={},cache={};
+  const grid=(name)=>{const a=store[name]||(store[name]=[]);return{values:()=>a.map(r=>r.slice()),setHeader:h=>{a[0]=h.slice()},appendRows:rows=>{const s=a.length+1;rows.forEach(r=>a.push(r.slice()));return s},setRow:(r,arr)=>{a[r-1]=arr.slice()},deleteRow:r=>{a.splice(r-1,1)}}};
+  const env={now:()=>localNow(),today:()=>localISO(),nowPlus:d=>localNow(d),hash:s=>sha256(unescape(encodeURIComponent(s))),
+    uuid:()=>([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c=>(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16)),
+    cacheGet:k=>cache[k]&&cache[k].exp>Date.now()?cache[k].v:null,cachePut:(k,v,s)=>{cache[k]={v,exp:Date.now()+s*1000}},lock:fn=>fn()};
+  const app=arivuCore(arivuDB(grid,ARIVU_SCHEMA),env);
+  demoInst={handle:q=>app.handle(JSON.parse(JSON.stringify(q))),setup:a=>app.setup(a)};
+  seedDemo(demoInst,localISO());
+  return demoInst;
+}
+
+/* ---- API ---- */
+async function api(action,data){
+  const body=Object.assign({action,token:state.token||""},data||{});let res;
+  if(API_URL){
+    let r;try{r=await fetch(API_URL,{method:"POST",body:JSON.stringify(body)})}catch(e){throw new Error("Couldn't reach the server. Check your internet connection and try again.")}
+    try{res=await r.json()}catch(e){throw new Error("The server sent an unexpected reply. Please try again in a minute.")}
+  }else if(DEMO){await new Promise(r=>setTimeout(r,140));res=demoApp().handle(body)}
+  else throw new Error("The student portal isn't connected yet.");
+  if(!res.ok){if(action!=="login"&&/log in again|expired|not active/i.test(res.error))endSession(true);throw new Error(res.error)}
+  if(res.data){state.db=res.data;state.user=res.data.me}
+  return res;
+}
+function sendLead(l){if(!API_URL&&!DEMO)return;api("lead",{name:l.name,email:l.email,phone:l.phone,program:course(l.course)?.title||l.course,src:l.src,message:l.message||"",page:location.href}).catch(()=>{})}
+function endSession(expired){state.token=null;state.db=null;state.user=null;tokenStore.set(null);if(expired&&state.route==="portal"){toast("Please log in again.");go("signin")}}
+async function restoreSession(){
+  const t=tokenStore.get();if(!t||!API_URL)return;
+  state.token=t;try{await api("bootstrap");renderNav();if(["portal","signin"].includes(state.route))render()}catch(e){endSession(false)}
+}
+let busyN=0;
+function busy(on){busyN=Math.max(0,busyN+(on?1:-1));let b=$("#busy");if(!b){b=document.createElement("div");b.id="busy";b.setAttribute("role","status");document.body.appendChild(b)}b.className=busyN?"on":"";b.textContent=busyN?"Working…":""}
+async function run(action,data,okMsg){busy(true);try{const r=await api(action,data);if(okMsg)toast(okMsg);rerender();return r}finally{busy(false)}}
+function rerender(){if(state.route!=="portal")return;const y=scrollY;render();window.scrollTo(0,y)}
+
+/* ---- Helpers ---- */
+const D=()=>state.db;
+const today=()=>localISO();
+const uBy=id=>(D().users||[]).find(u=>u.id===id);
+const bBy=id=>(D().batches||[]).find(b=>b.id===id);
+const cTitle=id=>course(id)?course(id).title:id;
+const fDate=iso=>iso?new Date(iso.slice(0,10)+"T00:00:00Z").toLocaleDateString("en-IN",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}):"";
+const fDay=iso=>iso?new Date(iso.slice(0,10)+"T00:00:00Z").toLocaleDateString("en-IN",{weekday:"short",day:"numeric",month:"short",timeZone:"UTC"}):"";
+const t12=hm=>{if(!hm)return"";let[h,m]=hm.split(":").map(Number);const ap=h>=12?"PM":"AM";h=h%12||12;return`${h}:${String(m).padStart(2,"0")} ${ap}`};
+const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const dowOf=iso=>DOW[new Date(iso+"T00:00:00Z").getUTCDay()];
+const addDays=(iso,n)=>{const d=new Date(iso+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)};
+const daysLabel=s=>{const d=(s||"").split(",");return d.join(",")==="Mon,Tue,Wed,Thu,Fri"?"Mon–Fri":d.join(",")==="Sat,Sun"?"Sat & Sun":d.join(", ")};
+const timeLabel=b=>`${t12(b.startTime)} – ${t12(b.endTime)}`;
+const enrolled=bid=>(D().enrollments||[]).filter(e=>e.batchId===bid&&e.status!=="removed");
+const initials=n=>String(n||"?").split(/\s+/).filter(Boolean).slice(0,2).map(s=>s[0].replace(/\W/,"")).join("").toUpperCase()||"?";
+const pill=(t,cls="")=>`<span class="pill ${cls}">${esc(t)}</span>`;
+const jarg=o=>esc(JSON.stringify(o));
+const EVT={holiday:["Holiday","warn"],"class-off":["No class","bad"],"extra-class":["Extra class","ok"],announcement:["Notice","info"],exam:["Assessment","info"]};
+function offReason(b,iso){
+  const ev=(D().events||[]).find(e=>(e.type==="holiday"||e.type==="class-off")&&(!e.batchId||e.batchId===b.id)&&iso>=e.date&&iso<=(e.endDate||e.date));
+  if(ev)return ev.title;
+  const lv=(D().leaves||[]).find(l=>(l.status||"approved")==="approved"&&l.userId===b.facultyId&&iso>=l.from&&iso<=(l.to||l.from));
+  return lv?"Faculty on leave":"";
+}
+function classDays(b,from,count){
+  const out=[],days=(b.days||"").split(",");let d=from<b.startDate?b.startDate:from;
+  for(let i=0;i<200&&out.length<count;i++,d=addDays(d,1)){if(b.endDate&&d>b.endDate)break;if(days.includes(dowOf(d)))out.push({date:d,off:offReason(b,d)})}
+  return out;
+}
+function nextClass(b){
+  if(b.status==="completed")return null;const now=localNow().slice(11);
+  return classDays(b,today(),12).find(c=>!c.off&&(c.date>today()||now<b.endTime))||null;
+}
+function liveNow(b,c){if(!c||c.date!==today())return false;const now=localNow().slice(11),[h,m]=b.startTime.split(":").map(Number),early=`${String(h-(m<15?1:0)).padStart(2,"0")}:${String((m+45)%60).padStart(2,"0")}`;return now>=early&&now<b.endTime}
+const when=iso=>iso===today()?"Today":iso===addDays(today(),1)?"Tomorrow":fDay(iso);
+function attStats(list){const s={P:0,A:0,L:0};list.forEach(a=>{if(s[a.status]!==undefined)s[a.status]++});s.total=s.P+s.A+s.L;s.pct=s.total?Math.round(s.P/s.total*100):0;return s}
+function ring(p,label){const R=35,C=2*Math.PI*R;return`<svg class="ring" viewBox="0 0 86 86" role="img" aria-label="${label||p+"%"}"><circle class="bgc" cx="43" cy="43" r="${R}"/><circle class="fgc" cx="43" cy="43" r="${R}" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-Math.min(100,p)/100)}" transform="rotate(-90 43 43)"/><text x="43" y="49" text-anchor="middle">${p}%</text></svg>`}
+const bar=p=>`<div class="prog"><i style="width:${Math.min(100,+p||0)}%"></i></div>`;
+const empty=(t,ic="spark")=>`<div class="empty">${I(ic)}<span>${t}</span></div>`;
+const head=(eyebrow,title,right="")=>`<div class="ptop"><div><span class="eyebrow">${eyebrow}</span><h1>${title}</h1></div>${right}</div>`;
+function notices(limit=6){
+  const t=today(),list=[];
+  (D().events||[]).forEach(e=>{if((e.endDate||e.date)>=addDays(t,-3))list.push({date:e.date,end:e.endDate,type:e.type,title:e.title,details:e.details,batch:e.batchId?bBy(e.batchId):null,id:e.id,createdBy:e.createdBy})});
+  if(D().me.role==="student")(D().leaves||[]).forEach(l=>{if((l.to||l.from)>=t)(D().batches||[]).filter(b=>b.facultyId===l.userId).forEach(b=>list.push({date:l.from,end:l.to!==l.from?l.to:"",type:"class-off",title:`No ${cTitle(b.courseId)} class`,details:`${l.facultyName||"Your trainer"} is on leave.`,batch:b}))});
+  return list.sort((a,b)=>a.date<b.date?-1:1).slice(0,limit);
+}
+function noticeList(list,canDelete){
+  if(!list.length)return empty("No notices right now.","megaphone");
+  return`<ul class="nlist">${list.map(n=>{const[lab,cls]=EVT[n.type]||EVT.announcement;return`<li><div class="ndate"><b>${new Date(n.date+"T00:00:00Z").getUTCDate()}</b><span>${new Date(n.date+"T00:00:00Z").toLocaleDateString("en-IN",{month:"short",timeZone:"UTC"})}</span></div>
+    <div class="nbody"><div class="nrow">${pill(lab,cls)}<b>${esc(n.title)}</b></div><small>${n.end?fDate(n.date)+" to "+fDate(n.end):fDay(n.date)}${n.batch?" · "+esc(n.batch.name):" · All batches"}</small>${n.details?`<p>${esc(n.details)}</p>`:""}</div>
+    ${canDelete&&n.id&&canDelete(n)?`<button class="btn btn-line btn-sm" data-call="deleteEvent" data-args="${jarg({id:n.id})}" data-confirm="Delete?" data-ok="Notice deleted">Delete</button>`:""}</li>`}).join("")}</ul>`;
+}
+
+/* ---- Generic forms ---- */
+function F(fields,vals={}){
+  return fields.map(f=>{
+    const v=vals[f.n]!==undefined&&vals[f.n]!==null?vals[f.n]:(f.v!==undefined?f.v:""),id="pf_"+f.n+"_"+(uid++);
+    if(f.t==="hidden")return`<input type="hidden" name="${f.n}" value="${esc(v)}">`;
+    let ctl;
+    if(f.t==="select")ctl=`<select id="${id}" name="${f.n}">${f.o.map(([ov,ol])=>`<option value="${esc(ov)}" ${String(ov)===String(v)?"selected":""}>${esc(ol)}</option>`).join("")}</select>`;
+    else if(f.t==="textarea")ctl=`<textarea id="${id}" name="${f.n}" rows="3" placeholder="${esc(f.ph||"")}">${esc(v)}</textarea>`;
+    else if(f.t==="days")ctl=`<div class="daypick" id="${id}">${["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<label><input type="checkbox" name="days" value="${d}" ${String(v).split(",").includes(d)?"checked":""}><span>${d}</span></label>`).join("")}</div>`;
+    else ctl=`<input id="${id}" name="${f.n}" type="${f.t||"text"}" value="${esc(v)}" placeholder="${esc(f.ph||"")}" ${f.t==="tel"?'inputmode="numeric" maxlength="10"':""} ${f.max?`max="${f.max}"`:""} ${f.min!==undefined?`min="${f.min}"`:""} ${f.ac?`autocomplete="${f.ac}"`:""}>`;
+    return`<div class="field${f.full?" full":""}"><label for="${id}">${esc(f.l)}</label>${ctl}${f.help?`<small class="help">${f.help}</small>`:""}</div>`;
+  }).join("");
+}
+function apiForm(action,fields,vals,submit,o={}){
+  return`<form class="pform" data-api="${action}" data-ok="${esc(o.ok||"Saved")}"${o.close?' data-closeok="1"':""}${o.reset?' data-reset="1"':""} novalidate><div class="pgrid">${F(fields,vals)}</div><div class="formerr" role="alert" hidden></div><div class="pf-actions"><button class="btn btn-flame" type="submit">${submit}</button>${o.close?`<button type="button" class="btn btn-line" data-close-btn>Cancel</button>`:""}</div></form>`;
+}
+function modal(title,inner,wide){
+  $("#layer").innerHTML=`<div class="backdrop" data-close><div class="modal pmodal${wide?" wide":""}" role="dialog" aria-modal="true" aria-labelledby="pmh"><div class="bro-head"><h2 id="pmh" style="font-size:22px">${title}</h2><button class="xbtn" data-close-btn aria-label="Close">✕</button></div>${inner}</div></div>`;
+  setTimeout(()=>$("#layer input:not([type=hidden]),#layer select,#layer textarea")?.focus(),0);
+}
+async function submitApiForm(f){
+  const action=f.dataset.api,data={},er=f.querySelector(".formerr"),btn=f.querySelector("[type=submit]");
+  for(const[k,v]of new FormData(f).entries()){if(k==="days")data.days=(data.days?data.days+",":"")+v;else if(!/^(st_|pg_|rk_|ss_)/.test(k))data[k]=v}
+  if(action==="markAttendance")data.records=[...f.querySelectorAll("input[type=radio]:checked")].map(r=>({studentId:r.name.slice(3),status:r.value}));
+  if(action==="setProgress")data.items=[...f.querySelectorAll("[data-enr]")].map(r=>({enrollmentId:r.dataset.enr,progress:r.querySelector("[name^=pg_]").value,remark:r.querySelector("[name^=rk_]").value,status:r.querySelector("[name^=ss_]")?.value}));
+  if(action==="saveRecording"&&data.module!=="")data.module=String(Math.max(0,(parseInt(data.module,10)||1)-1));
+  if(action==="changePassword"&&data.newPassword!==data.confirm){er.hidden=false;er.textContent="The new passwords don't match.";return}
+  if(action==="login"){data.email=(data.email||"").trim()}
+  er.hidden=true;btn.disabled=true;busy(true);
+  try{
+    const r=await api(action,data);
+    if(action==="login"){state.token=r.token;tokenStore.set(r.token);state.ptab=null;state.pbatch=null;toast(`Welcome, ${r.data.me.name.split(" ")[0]}`);renderNav();return go("portal")}
+    if(f.dataset.closeok)closeLayer();
+    toast(action==="issueCertificate"?`Certificate ${r.certNo} issued`:f.dataset.ok||"Saved");
+    if(f.dataset.reset)f.reset();
+    rerender();
+  }catch(e){er.hidden=false;er.textContent=e.message}
+  finally{btn.disabled=false;busy(false)}
+}
+async function callAction(el){
+  if(el.dataset.confirm&&!el.classList.contains("armed")){el.classList.add("armed");el.dataset.label=el.innerHTML;el.textContent=el.dataset.confirm;setTimeout(()=>{if(el.isConnected&&el.classList.contains("armed")){el.classList.remove("armed");el.innerHTML=el.dataset.label}},3500);return}
+  el.disabled=true;
+  try{await run(el.dataset.call,JSON.parse(el.dataset.args||"{}"),el.dataset.ok||"Done")}catch(e){toast(e.message)}finally{if(el.isConnected)el.disabled=false}
+}
+
+/* ---- Video player (Google Drive / YouTube / Vimeo) ---- */
+function embedOf(u){
+  let m=String(u).match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]{10,})/);if(m)return{kind:"Google Drive",src:`https://drive.google.com/file/d/${m[1]}/preview`,demo:/DEMO/.test(m[1])};
+  m=String(u).match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/live\/)([\w-]{11})/);if(m)return{kind:"YouTube",src:`https://www.youtube-nocookie.com/embed/${m[1]}?rel=0&modestbranding=1`};
+  m=String(u).match(/vimeo\.com\/(?:video\/)?(\d+)/);if(m)return{kind:"Vimeo",src:`https://player.vimeo.com/video/${m[1]}`};
+  return{kind:"Link",src:u};
+}
+function player(r){
+  const e=embedOf(r.url),me=D().me,mark=`${me.name} · ${me.studentCode||me.email}`;
+  return`<div class="vplayer" oncontextmenu="return false">
+    ${e.demo?`<div class="vdemo">${I("play")}<b>${esc(r.title)}</b><span>Sample recording. On your live site the Google Drive video streams here.</span></div>`:
+      e.kind==="Link"?`<div class="vdemo">${I("video")}<b>${esc(r.title)}</b><a class="btn btn-white btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">Open recording</a></div>`:
+      `<iframe src="${esc(e.src)}" title="${esc(r.title)}" allow="autoplay; fullscreen; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" ${CONFIG.videoSandbox===false?"":'sandbox="allow-scripts allow-same-origin allow-presentation"'} loading="lazy"></iframe><div class="vshield" aria-hidden="true"></div>`}
+    <div class="vmark" aria-hidden="true">${esc(mark)}</div>
+  </div>
+  <div class="vmeta"><div><b>${esc(r.title)}</b><small>${fDay(r.date)}${r.module!==""&&course(bBy(r.batchId)?.courseId)?" · Module "+(+r.module+1)+": "+esc(course(bBy(r.batchId).courseId).modules[+r.module]?.[0]||""):""}</small></div><button class="btn btn-line btn-sm" data-pset="watch" data-val="">Close player</button></div>`;
+}
+
+/* ---- Shared staff components ---- */
+function batchPick(list,label="Batch"){
+  if(!list.length)return"";
+  if(!list.some(b=>b.id===state.pbatch))state.pbatch=(list.find(b=>b.status!=="completed")||list[0]).id;
+  return`<label class="picker"><span>${label}</span><select data-pf="pbatch">${list.map(b=>`<option value="${b.id}" ${b.id===state.pbatch?"selected":""}>${esc(b.name)} · ${esc(cTitle(b.courseId))}${b.status==="completed"?" (completed)":""}</option>`).join("")}</select></label>`;
+}
+function rosterForm(b){
+  const d=state.pdate&&state.pdate<=today()?state.pdate:today(),en=enrolled(b.id),recs=(D().attendance||[]).filter(a=>a.batchId===b.id&&a.date===d),marked=recs.length>0,off=offReason(b,d),regular=(b.days||"").split(",").includes(dowOf(d));
+  return`<div class="ptools">${batchPick(D().batches)}<label class="picker"><span>Date</span><input type="date" data-pf="pdate" value="${d}" max="${today()}"></label></div>
+  ${off?`<div class="notice"><b>${esc(off)}</b> on ${fDay(d)}. Mark attendance only if the class still happened.</div>`:!regular?`<div class="notice">${fDay(d)} isn't a regular class day for this batch (${daysLabel(b.days)}). You can still mark attendance for an extra class.</div>`:""}
+  <form class="pform box" data-api="markAttendance" data-ok="Attendance saved"><input type="hidden" name="batchId" value="${b.id}"><input type="hidden" name="date" value="${d}">
+    <div class="roster-head"><div><b>${esc(b.name)}</b> · ${fDay(d)} · ${timeLabel(b)}<small>${en.length} students · ${marked?`marked (${attStats(recs).P} present)`:"not marked yet"}</small></div>${en.length?`<button type="button" class="btn btn-line btn-sm" data-act="allP">Mark all present</button>`:""}</div>
+    ${en.length?en.map(e=>{const s=uBy(e.studentId)||{},cur=(recs.find(r=>r.studentId===e.studentId)||{}).status||"P";return`<div class="rrow"><span class="av">${initials(s.name)}</span><div class="rname"><b>${esc(s.name||e.studentId)}</b><small>${esc(s.studentCode||"")}</small></div>
+      <div class="seg" role="radiogroup" aria-label="Attendance for ${esc(s.name||"")}">${[["P","Present"],["A","Absent"],["L","Leave"]].map(([v,l])=>`<label class="s${v}"><input type="radio" name="st_${e.studentId}" value="${v}" ${cur===v?"checked":""}><span>${l}</span></label>`).join("")}</div></div>`}).join(""):empty("No students in this batch yet.","users")}
+    <div class="formerr" role="alert" hidden></div>${en.length?`<div class="pf-actions"><button class="btn btn-flame" type="submit">${marked?"Update attendance":"Save attendance"}</button></div>`:""}
+  </form>
+  ${attSummary(b)}`;
+}
+function attSummary(b){
+  const en=enrolled(b.id),all=(D().attendance||[]).filter(a=>a.batchId===b.id),dates=[...new Set(all.map(a=>a.date))].sort().reverse();
+  if(!dates.length)return"";
+  return`<div class="pcols"><div class="box tablewrap"><h3 class="bh">Student attendance</h3><table><thead><tr><th>Student</th><th>Present</th><th>Absent</th><th>Leave</th><th>Attendance</th></tr></thead><tbody>
+    ${en.map(e=>{const s=attStats(all.filter(a=>a.studentId===e.studentId));return`<tr><td>${esc(uBy(e.studentId)?.name||e.studentId)}</td><td>${s.P}</td><td>${s.A}</td><td>${s.L}</td><td><span class="pill ${s.pct>=75?"ok":s.pct>=60?"warn":"bad"}">${s.pct}%</span></td></tr>`}).join("")}</tbody></table></div>
+    <div class="box tablewrap"><h3 class="bh">Recent classes</h3><table><thead><tr><th>Date</th><th>Present</th><th>Absent</th><th>Leave</th></tr></thead><tbody>
+    ${dates.slice(0,10).map(d=>{const s=attStats(all.filter(a=>a.date===d));return`<tr><td><button class="tlink" data-pset="pdate" data-val="${d}">${fDay(d)}</button></td><td>${s.P}</td><td>${s.A}</td><td>${s.L}</td></tr>`}).join("")}</tbody></table></div></div>`;
+}
+function moduleOpts(b){const c=course(b.courseId);return[["","General / revision"]].concat((c?c.modules:[]).map((m,i)=>[String(i),`M${String(i+1).padStart(2,"0")} · ${m[0]}`]))}
+function topicsBlock(b,canAdd){
+  const c=course(b.courseId),list=(D().topics||[]).filter(t=>t.batchId===b.id).sort((a,x)=>a.date<x.date?1:-1),me=D().me;
+  return`${canAdd?`<div class="box"><h3 class="bh">Add today's topic</h3>${apiForm("saveTopic",[{n:"batchId",t:"hidden",v:b.id},{n:"date",l:"Class date",t:"date",v:today(),max:today()},{n:"module",l:"Module",t:"select",o:moduleOpts(b)},{n:"topic",l:"Topic covered",ph:"e.g. DAX CALCULATE and filter context",full:1},{n:"notes",l:"Notes for students (optional)",t:"textarea",ph:"Homework, practice set, what to bring next class",full:1}],{},"Add topic",{ok:"Topic added",reset:1})}</div>`:""}
+  <div class="box"><h3 class="bh">Topics covered · ${list.length}</h3>${list.length?`<ol class="tline">${list.map(t=>`<li><span class="tdot"></span><div><small>${fDay(t.date)}${t.module!==""&&c?` · M${String(+t.module+1).padStart(2,"0")} ${esc(c.modules[+t.module]?.[0]||"")}`:""}</small><b>${esc(t.topic)}</b>${t.notes?`<p>${esc(t.notes)}</p>`:""}</div>${canAdd&&(me.role==="admin"||t.facultyId===me.id)?`<button class="btn btn-line btn-sm" data-call="deleteTopic" data-args="${jarg({id:t.id})}" data-confirm="Delete?" data-ok="Topic deleted">Delete</button>`:""}</li>`).join("")}</ol>`:empty("No topics recorded yet.","book")}</div>`;
+}
+function syllabusBlock(b){
+  const c=course(b.courseId);if(!c)return"";const tp=(D().topics||[]).filter(t=>t.batchId===b.id),covered=new Set(tp.map(t=>t.module).filter(m=>m!==""));
+  return`<div class="box"><div class="ehead"><h3>${esc(c.title)}</h3><span class="mono">${covered.size} of ${c.modules.length} modules started</span></div>${bar(covered.size/c.modules.length*100)}
+    <div class="syl">${c.modules.map((m,i)=>`<details class="module${covered.has(String(i))?" done":""}"><summary><span class="n">${covered.has(String(i))?"✓":String(i+1).padStart(2,"0")}</span><span class="mt">${esc(m[0])}</span><span class="hrs">${m[1]} hrs</span></summary><div class="mbody"><ul>${m[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul>${m[3]?`<div class="lab">${I("flask")}<span><b>${c.track==="lang"?"Practice":"Lab"}:</b> ${esc(m[3])}</span></div>`:""}</div></details>`).join("")}</div></div>`;
+}
+function progressForm(b,admin){
+  const en=enrolled(b.id),att=(D().attendance||[]).filter(a=>a.batchId===b.id);
+  if(!en.length)return empty("No students in this batch yet.","users");
+  return`<form class="pform box tablewrap" data-api="setProgress" data-ok="Progress saved"><table class="ptable"><thead><tr><th>Student</th><th>Attendance</th><th>Progress %</th>${admin?"<th>Status</th>":""}<th>Remark for student</th></tr></thead><tbody>
+    ${en.map(e=>{const s=uBy(e.studentId)||{},a=attStats(att.filter(x=>x.studentId===e.studentId));return`<tr data-enr="${e.id}"><td><b>${esc(s.name||e.studentId)}</b><small class="db">${esc(s.studentCode||"")}</small></td><td>${a.total?a.pct+"%":"–"}</td>
+      <td><input class="numin" type="number" min="0" max="100" name="pg_${e.id}" value="${+e.progress||0}" aria-label="Progress for ${esc(s.name||"")}"></td>
+      ${admin?`<td><select name="ss_${e.id}" aria-label="Status">${["active","completed","dropped"].map(x=>`<option ${e.status===x?"selected":""}>${x}</option>`).join("")}</select></td>`:""}
+      <td><input type="text" name="rk_${e.id}" value="${esc(e.remark||"")}" placeholder="Optional" maxlength="300" aria-label="Remark for ${esc(s.name||"")}"></td></tr>`}).join("")}
+  </tbody></table><div class="formerr" role="alert" hidden></div><div class="pf-actions"><button class="btn btn-flame" type="submit">Save progress</button></div></form>`;
+}
+const profileView=()=>{const m=D().me;return`${head("Profile","Your account")}
+  <div class="box fg2"><div class="field"><label>Name</label><input value="${esc(m.name)}" disabled></div><div class="field"><label>Email (login)</label><input value="${esc(m.email)}" disabled></div>
+  <div class="field"><label>Mobile</label><input value="${m.phone?"+91 "+esc(m.phone):"–"}" disabled></div><div class="field"><label>${m.role==="student"?"Student ID":"Role"}</label><input value="${esc(m.studentCode||m.role)}" disabled></div></div>
+  <div class="box"><h3 class="bh">Change password</h3>${apiForm("changePassword",[{n:"oldPassword",l:"Current password",t:"password",ac:"current-password"},{n:"newPassword",l:"New password (min 6 characters)",t:"password",ac:"new-password"},{n:"confirm",l:"Confirm new password",t:"password",ac:"new-password"}],{},"Update password",{ok:"Password updated",reset:1})}</div>
+  <p class="srcs">To change your name, email or mobile number, contact the institute office.</p>`};
+
+/* ---- STUDENT ---- */
+function vStudent(t){
+  const db=D(),me=db.me,en=db.enrollments.filter(e=>e.status!=="removed"),rows=en.map(e=>({e,b:bBy(e.batchId),c:course(e.courseId)})).filter(x=>x.b&&x.c);
+  const att=attStats(db.attendance);
+  if(t==="home"){
+    const nx=rows.map(x=>Object.assign({n:nextClass(x.b)},x)).filter(x=>x.n).sort((a,b)=>(a.n.date+a.b.startTime)<(b.n.date+b.b.startTime)?-1:1)[0];
+    const avg=rows.length?Math.round(rows.reduce((s,x)=>s+(+x.e.progress||0),0)/rows.length):0;
+    return`${head("Student dashboard",`Welcome back, ${esc(me.name.split(" ")[0])}`,pill(me.studentCode||"Student","info"))}
+    ${nx?nextCard(nx):`<div class="box">${empty("No upcoming classes scheduled. Check notices for updates.","calendar")}</div>`}
+    <div class="kpis"><div><b>${att.total?att.pct+"%":"–"}</b><span>attendance</span></div><div><b>${avg}%</b><span>course progress</span></div><div><b>${att.P}</b><span>classes attended</span></div><div><b>${db.recordings.length}</b><span>recordings</span></div><div><b>${db.certificates.length}</b><span>certificates</span></div></div>
+    <div class="pcols"><div class="box"><h3 class="bh">My programs</h3>${rows.length?rows.map(x=>`<div class="enrollcard">${ring(+x.e.progress||0,"Progress")}<div><div class="ehead"><h3>${esc(x.c.title)}</h3>${x.e.status==="completed"?pill("Completed","ok"):""}</div><small class="db">${esc(x.b.name)} · ${daysLabel(x.b.days)} · ${timeLabel(x.b)}</small>${x.e.remark?`<p class="remark">${I("mentor")} ${esc(x.e.remark)}</p>`:""}</div></div>`).join(""):empty("You're not enrolled in a program yet.","book")}</div>
+    <div class="box"><h3 class="bh">Notices</h3>${noticeList(notices(6))}</div></div>`;
+  }
+  if(t==="classes")return`${head("Classes","Timings & meeting links")}${rows.length?rows.map(x=>{const n=nextClass(x.b),up=classDays(x.b,today(),8);return`<div class="box">
+      <div class="ehead"><div><h3>${esc(x.c.title)}</h3><small class="db">${esc(x.b.name)} · ${esc(x.b.kind)} batch · ${esc(x.b.mode)}</small></div>${x.b.status==="completed"?pill("Completed","ok"):pill("Active","info")}</div>
+      <div class="facts"><div>${I("calendar")}<span><small>Days</small>${daysLabel(x.b.days)}</span></div><div>${I("clock")}<span><small>Time</small>${timeLabel(x.b)}</span></div><div>${I("mentor")}<span><small>Trainer</small>${esc(x.b.facultyName||"To be announced")}</span></div><div>${I("flask")}<span><small>Started</small>${fDate(x.b.startDate)}${x.b.endDate?" · ends "+fDate(x.b.endDate):""}</span></div></div>
+      ${x.b.meetingLink?`<div class="meet"><div>${I("video")}<span><b>Online class link</b><small>${esc(x.b.meetingInfo||"Join a few minutes before class starts.")}</small></span></div><a class="btn ${liveNow(x.b,n)?"btn-flame":"btn-navy"}" href="${esc(x.b.meetingLink)}" target="_blank" rel="noopener">${liveNow(x.b,n)?"Join now · class is live":"Open meeting link"}</a></div>`:""}
+      ${up.length?`<h4 class="sub">Upcoming classes</h4><div class="chips">${up.map(c=>`<span class="dchip${c.off?" off":""}${c.date===today()?" now":""}"><b>${when(c.date)}</b><small>${c.off?esc(c.off):timeLabel(x.b)}</small></span>`).join("")}</div>`:""}
+    </div>`}).join(""):empty("You're not enrolled in a program yet.","book")}`;
+  if(t==="attendance"){
+    const bsel=rows.length>1?state.pbatch&&rows.some(x=>x.b.id===state.pbatch)?state.pbatch:"all":"all";
+    const list=db.attendance.filter(a=>bsel==="all"||a.batchId===bsel).sort((a,b)=>a.date<b.date?1:-1),s=attStats(list);
+    const months=[...new Set(list.map(a=>a.date.slice(0,7)))].slice(0,3);
+    return`${head("Attendance",`${s.total?s.pct+"%":"No classes marked yet"}`,rows.length>1?`<label class="picker"><span>Program</span><select data-pf="pbatch"><option value="all">All programs</option>${rows.map(x=>`<option value="${x.b.id}" ${bsel===x.b.id?"selected":""}>${esc(x.c.title)}</option>`).join("")}</select></label>`:"")}
+    <div class="kpis"><div><b>${s.P}</b><span>present</span></div><div><b>${s.A}</b><span>absent</span></div><div><b>${s.L}</b><span>leave</span></div><div><b>${s.pct}%</b><span>attendance</span></div></div>
+    ${s.total&&s.pct<75?`<div class="notice"><b>Your attendance is below 75%.</b> Watch the recordings for missed classes and talk to your mentor.</div>`:""}
+    <div class="cals">${months.map(m=>calMonth(m,list)).join("")}</div>
+    ${list.length?`<div class="box tablewrap"><table><thead><tr><th>Date</th><th>Program</th><th>Status</th></tr></thead><tbody>${list.map(a=>`<tr><td>${fDay(a.date)}</td><td>${esc(cTitle(bBy(a.batchId)?.courseId))}</td><td>${pill({P:"Present",A:"Absent",L:"Leave"}[a.status],{P:"ok",A:"bad",L:"warn"}[a.status])}</td></tr>`).join("")}</tbody></table></div>`:empty("Attendance appears here once your trainer marks it.","calendar")}`;
+  }
+  if(t==="recordings"){
+    const w=db.recordings.find(r=>r.id===state.watch);
+    return`${head("Class recordings",`${db.recordings.length} recordings`)}${w?`<div class="box vbox">${player(w)}</div>`:""}
+    <p class="srcs">Recordings stream here for enrolled students only. Please don't share or record them.</p>
+    ${rows.map(x=>{const list=db.recordings.filter(r=>r.batchId===x.b.id).sort((a,b)=>a.date<b.date?1:-1);return`<div class="box"><div class="ehead"><h3>${esc(x.c.title)}</h3><span class="mono">${list.length} sessions</span></div>
+      ${list.length?list.map(r=>`<div class="rec"><div class="thumb">${pic("c:"+x.c.id,x.c)}<b>${I("play")}</b></div><div><h4>${esc(r.title)}</h4><span class="mono" style="color:var(--muted)">${fDay(r.date)}${r.module!==""?" · Module "+(+r.module+1):""}</span></div><button class="btn ${r.id===state.watch?"btn-flame":"btn-line"} btn-sm" data-pset="watch" data-val="${r.id}">${r.id===state.watch?"Playing":"Watch"}</button></div>`).join(""):`<p class="srcs">Recordings appear here after each live class.</p>`}</div>`}).join("")||empty("No recordings yet.","video")}`;
+  }
+  if(t==="notes")return`${head("Notes & materials","Study materials")}${rows.map(x=>{const list=db.notes.filter(n=>n.batchId===x.b.id);return`<div class="box"><div class="ehead"><h3>${esc(x.c.title)}</h3><span class="mono">${list.length} files</span></div>
+      ${list.length?`<ul class="files">${list.map(n=>`<li>${I("book")}<div><b>${esc(n.title)}</b><small>${esc(n.kind)} · ${fDate(n.date)}</small></div><a class="btn btn-line btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">Open</a></li>`).join("")}</ul>`:`<p class="srcs">Your trainer's notes and assignments appear here.</p>`}</div>`}).join("")||empty("No notes yet.","book")}`;
+  if(t==="progress")return`${head("Topics & progress","What's been covered")}${rows.map(x=>`<div class="box"><div class="ehead"><h3>${esc(x.c.title)}</h3><span class="mono">${+x.e.progress||0}% complete</span></div>${bar(x.e.progress)}${x.e.remark?`<p class="remark">${I("mentor")} <b>Trainer's note:</b> ${esc(x.e.remark)}</p>`:""}</div>${topicsBlock(x.b,false)}${syllabusBlock(x.b)}`).join("")||empty("You're not enrolled in a program yet.","book")}`;
+  if(t==="certificates")return`${head("Certificates","Your certificates")}${db.certificates.length?`<div class="certs">${db.certificates.map(cf=>{const c=course(cf.courseId);return c?`<div class="box certcard"><div class="cthumb">${certSVG(c,{name:me.name,certNo:cf.certNo,issueDate:cf.issueDate,grade:cf.grade})}</div><div><h3>${esc(c.title)}</h3><small class="db">No. ${esc(cf.certNo)} · Issued ${fDate(cf.issueDate)}${cf.grade?" · "+esc(cf.grade):""}</small>
+      <div class="row" style="justify-content:flex-start;margin-top:12px"><button class="btn btn-flame btn-sm" data-mycert="${cf.id}" data-kind="pdf">${I("download")} PDF</button><button class="btn btn-line btn-sm" data-mycert="${cf.id}" data-kind="png">${I("download")} Image</button><button class="btn btn-line btn-sm" data-mycert="${cf.id}" data-kind="view">View</button></div></div></div>`:""}).join("")}</div>`:
+      `<div class="box">${empty("Your certificate appears here once the institute issues it after you complete the program. It also carries the SRM Infotech collaboration.","award")}</div>`}`;
+  return profileView();
+}
+function nextCard(x){
+  const live=liveNow(x.b,x.n);
+  return`<div class="nextcard${live?" live":""}"><div class="nc-l"><span class="eyebrow" style="color:#ffcf8a">${live?"Live now":"Next class"}</span><h2>${esc(x.c.title)}</h2>
+    <p>${when(x.n.date)} · ${timeLabel(x.b)} · ${esc(x.b.facultyName||"Arivu faculty")}</p><small>${esc(x.b.name)} · ${esc(x.b.mode)}</small></div>
+    <div class="nc-r">${x.b.meetingLink?`<a class="btn ${live?"btn-flame":"btn-white"}" href="${esc(x.b.meetingLink)}" target="_blank" rel="noopener">${I("video")} ${live?"Join class now":"Meeting link"}</a>`:""}${x.b.meetingInfo?`<small>${esc(x.b.meetingInfo)}</small>`:""}</div></div>`;
+}
+function calMonth(ym,list){
+  const[y,m]=ym.split("-").map(Number),first=new Date(Date.UTC(y,m-1,1)),days=new Date(Date.UTC(y,m,0)).getUTCDate(),lead=(first.getUTCDay()+6)%7,by={};
+  list.forEach(a=>{if(a.date.startsWith(ym))by[+a.date.slice(8)]=a.status});
+  const hol=new Set();(D().events||[]).filter(e=>e.type==="holiday").forEach(e=>{for(let d=e.date;d<=(e.endDate||e.date);d=addDays(d,1))if(d.startsWith(ym))hol.add(+d.slice(8))});
+  let cells="";for(let i=0;i<lead;i++)cells+="<i></i>";
+  for(let d=1;d<=days;d++){const s=by[d],h=hol.has(d);cells+=`<span class="${s?"c"+s:h?"cH":""}" title="${s?{P:"Present",A:"Absent",L:"Leave"}[s]:h?"Holiday":""}">${d}</span>`}
+  return`<div class="cal box"><b>${first.toLocaleDateString("en-IN",{month:"long",year:"numeric",timeZone:"UTC"})}</b><div class="cgrid">${["M","T","W","T","F","S","S"].map(x=>`<em>${x}</em>`).join("")}${cells}</div><div class="clegend"><span class="cP">Present</span><span class="cA">Absent</span><span class="cL">Leave</span><span class="cH">Holiday</span></div></div>`;
+}
+
+/* ---- FACULTY ---- */
+function vFaculty(t){
+  const db=D(),me=db.me,mine=db.batches,b=()=>bBy(state.pbatch)||mine[0];
+  if(!mine.length&&!["leave","profile","home"].includes(t))return`${head("Faculty","No batches yet")}<div class="box">${empty("No batches are assigned to you yet. The admin assigns batches.","users")}</div>`;
+  if(t==="home"){
+    const todays=mine.filter(x=>x.status!=="completed"&&(x.days||"").split(",").includes(dowOf(today()))&&today()>=x.startDate&&(!x.endDate||today()<=x.endDate));
+    const students=new Set(db.enrollments.map(e=>e.studentId)).size,pend=db.leaves.filter(l=>l.status==="pending").length;
+    return`${head("Faculty dashboard",`Hello, ${esc(me.name.split(" ")[0])}`)}
+    <div class="kpis"><div><b>${mine.filter(x=>x.status!=="completed").length}</b><span>active batches</span></div><div><b>${students}</b><span>students</span></div><div><b>${todays.length}</b><span>classes today</span></div><div><b>${pend}</b><span>leave requests pending</span></div></div>
+    <div class="box"><h3 class="bh">Today's classes · ${fDay(today())}</h3>${todays.length?todays.map(x=>{const off=offReason(x,today()),marked=db.attendance.some(a=>a.batchId===x.id&&a.date===today());return`<div class="trow2"><div><b>${esc(x.name)} · ${esc(cTitle(x.courseId))}</b><small>${timeLabel(x)} · ${enrolled(x.id).length} students${off?" · "+esc(off):""}</small></div><div class="row">${x.meetingLink?`<a class="btn btn-line btn-sm" href="${esc(x.meetingLink)}" target="_blank" rel="noopener">Meeting link</a>`:""}<button class="btn ${marked?"btn-line":"btn-flame"} btn-sm" data-goto="attendance" data-batch="${x.id}">${marked?"Attendance marked ✓":"Mark attendance"}</button></div></div>`}).join(""):empty("No classes scheduled for you today.","calendar")}</div>
+    <div class="pcols"><div class="box"><h3 class="bh">My batches</h3>${mine.map(x=>`<div class="trow2"><div><b>${esc(x.name)}</b><small>${esc(cTitle(x.courseId))} · ${daysLabel(x.days)} · ${timeLabel(x)}</small></div>${pill(x.status,x.status==="completed"?"ok":"info")}</div>`).join("")||empty("No batches yet.")}</div><div class="box"><h3 class="bh">Notices</h3>${noticeList(notices(5))}</div></div>`;
+  }
+  if(t==="attendance")return`${head("Attendance","Mark attendance")}${rosterForm(b())}`;
+  if(t==="topics")return`${head("Topics","Topics covered")}<div class="ptools">${batchPick(mine)}</div>${topicsBlock(b(),true)}`;
+  if(t==="progress")return`${head("Progress","Student progress")}<div class="ptools">${batchPick(mine)}</div><p class="srcs">Set each student's course progress and leave a short remark. Students see both in their portal.</p>${progressForm(b(),false)}`;
+  if(t==="syllabus")return`${head("Syllabus","Course syllabus")}<div class="ptools">${batchPick(mine)}</div>${syllabusBlock(b())}`;
+  if(t==="notices")return`${head("Notices","Batch notices")}<div class="box"><h3 class="bh">Post a notice to your batch</h3>${apiForm("saveEvent",[{n:"batchId",l:"Batch",t:"select",o:mine.map(x=>[x.id,x.name+" · "+cTitle(x.courseId)])},{n:"type",l:"Type",t:"select",o:[["announcement","Notice"],["class-off","Class cancelled"],["extra-class","Extra class"],["exam","Assessment"]]},{n:"title",l:"Title",ph:"e.g. Class moved to Saturday",full:1},{n:"date",l:"Date",t:"date",v:today()},{n:"endDate",l:"End date (optional)",t:"date"},{n:"details",l:"Details",t:"textarea",full:1}],{},"Post notice",{ok:"Notice posted",reset:1})}</div>
+    <div class="box"><h3 class="bh">Current notices</h3>${noticeList(notices(30),n=>n.createdBy===me.id)}</div>`;
+  if(t==="leave")return`${head("Leave","Apply for leave")}<div class="box"><h3 class="bh">New leave request</h3>${apiForm("applyLeave",[{n:"from",l:"From",t:"date",v:today()},{n:"to",l:"To",t:"date",v:today()},{n:"reason",l:"Reason",t:"textarea",full:1}],{},"Send request",{ok:"Leave request sent to admin",reset:1})}<p class="srcs">Once the admin approves, your students see "No class" for those dates.</p></div>
+    <div class="box tablewrap"><h3 class="bh">My requests</h3>${db.leaves.length?`<table><thead><tr><th>Dates</th><th>Reason</th><th>Status</th><th></th></tr></thead><tbody>${db.leaves.slice().sort((a,b)=>a.from<b.from?1:-1).map(l=>`<tr><td>${fDate(l.from)}${l.to!==l.from?" – "+fDate(l.to):""}</td><td class="wrapcell">${esc(l.reason)}</td><td>${pill(l.status,{approved:"ok",rejected:"bad",pending:"warn"}[l.status])}</td><td>${l.status==="pending"?`<button class="btn btn-line btn-sm" data-call="cancelLeave" data-args="${jarg({id:l.id})}" data-confirm="Withdraw?" data-ok="Request withdrawn">Withdraw</button>`:""}</td></tr>`).join("")}</tbody></table>`:empty("No leave requests yet.","calendar")}</div>`;
+  return profileView();
+}
+
+/* ---- ADMIN ---- */
+function vAdmin(t){
+  const db=D(),users=db.users.filter(u=>u.role!=="admin"),studs=users.filter(u=>u.role==="student"),facs=users.filter(u=>u.role==="faculty");
+  const b=()=>bBy(state.pbatch)||db.batches[0],q=(state.pq||"").toLowerCase(),match=s=>!q||s.toLowerCase().includes(q);
+  const search=ph=>`<label class="picker grow"><span>Search</span><input type="search" data-pq value="${esc(state.pq||"")}" placeholder="${ph}"></label>`;
+  const statusPill=u=>u.status==="active"?pill("Active","ok"):pill("Removed","bad");
+  if(t==="home"){
+    const todays=db.batches.filter(x=>x.status!=="completed"&&(x.days||"").split(",").includes(dowOf(today()))&&today()>=x.startDate),pend=db.leaves.filter(l=>l.status==="pending");
+    return`${head("Admin","Institute overview")}
+    <div class="kpis"><div><b>${studs.filter(u=>u.status==="active").length}</b><span>active students</span></div><div><b>${facs.filter(u=>u.status==="active").length}</b><span>faculty</span></div><div><b>${db.batches.filter(x=>x.status!=="completed").length}</b><span>running batches</span></div><div><b>${db.leads.filter(l=>(l.Status||"new")==="new").length}</b><span>new leads</span></div><div><b>${pend.length}</b><span>leave requests</span></div><div><b>${db.certificates.filter(c=>c.status==="issued").length}</b><span>certificates</span></div></div>
+    ${pend.length?`<div class="box"><h3 class="bh">Leave requests waiting for you</h3>${pend.map(l=>leaveRow(l)).join("")}</div>`:""}
+    <div class="pcols"><div class="box"><h3 class="bh">Today's classes</h3>${todays.length?todays.map(x=>{const marked=db.attendance.some(a=>a.batchId===x.id&&a.date===today()),off=offReason(x,today());return`<div class="trow2"><div><b>${esc(x.name)}</b><small>${esc(cTitle(x.courseId))} · ${timeLabel(x)} · ${esc(uBy(x.facultyId)?.name||"No faculty")}${off?" · "+esc(off):""}</small></div>${marked?pill("Marked","ok"):pill("Not marked","warn")}</div>`}).join(""):empty("No classes today.","calendar")}</div>
+    <div class="box"><h3 class="bh">Latest leads</h3>${db.leads.slice(0,5).map(l=>`<div class="trow2"><div><b>${esc(l.Name)}</b><small>${esc(l.Program)} · ${esc(l.Source)}</small></div><small>${esc(String(l.Received).slice(0,16))}</small></div>`).join("")||empty("No leads yet.","megaphone")}<button class="btn btn-line btn-sm" data-goto="leads" style="margin-top:10px">All leads</button></div></div>`;
+  }
+  if(t==="leads"){const list=db.leads.filter(l=>match([l.Name,l.Email,l.WhatsApp,l.Program,l.Source].join(" ")));return`${head("Leads",`${db.leads.length} enquiries`)}<div class="ptools">${search("Name, phone, program…")}</div>
+    <div class="box tablewrap"><table><thead><tr><th>Received</th><th>Name</th><th>Program</th><th>Source</th><th>WhatsApp</th><th>Email</th><th>Status</th></tr></thead><tbody>
+    ${list.map(l=>`<tr><td class="mono">${esc(String(l.Received).slice(0,16))}</td><td><b>${esc(l.Name)}</b>${l.Message?`<small class="db wrapcell">${esc(l.Message)}</small>`:""}</td><td>${esc(l.Program)}</td><td>${esc(l.Source)}</td><td class="mono">${esc(l.WhatsApp)}</td><td>${esc(l.Email)}</td>
+      <td><select data-leadst="${l.id}" aria-label="Status for ${esc(l.Name)}">${["new","called","demo booked","enrolled","not interested"].map(s=>`<option ${(l.Status||"new")===s?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")||`<tr><td colspan="7">No leads match.</td></tr>`}</tbody></table></div>`}
+  if(t==="students"){const list=studs.filter(u=>match([u.name,u.email,u.phone,u.studentCode].join(" ")));return`${head("Students",`${studs.filter(u=>u.status==="active").length} active students`,`<button class="btn btn-flame" data-modal="user" data-role="student">${I("plus")} Add student</button>`)}
+    <div class="ptools">${search("Name, email, phone or ID…")}</div>
+    <div class="box tablewrap"><table><thead><tr><th>Student</th><th>Contact</th><th>Programs</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+    ${list.map(u=>`<tr><td><b>${esc(u.name)}</b><small class="db mono">${esc(u.studentCode)}</small></td><td>${esc(u.email)}<small class="db">${u.phone?"+91 "+esc(u.phone):""}</small></td>
+      <td class="wrapcell">${db.enrollments.filter(e=>e.studentId===u.id).map(e=>`<span class="tag">${esc(bBy(e.batchId)?.name||e.batchId)}${e.status==="completed"?" ✓":""}</span>`).join(" ")||"–"}</td><td>${statusPill(u)}</td>
+      <td class="acts"><button class="btn btn-line btn-sm" data-modal="user" data-id="${u.id}">Edit</button><button class="btn btn-line btn-sm" data-modal="enroll" data-id="${u.id}">Enrol</button>
+      ${u.status==="active"?`<button class="btn btn-line btn-sm" data-call="setUserStatus" data-args="${jarg({id:u.id,status:"removed"})}" data-confirm="Remove access?" data-ok="Access removed">Remove</button>`:`<button class="btn btn-line btn-sm" data-call="setUserStatus" data-args="${jarg({id:u.id,status:"active"})}" data-ok="Access restored">Restore</button>`}</td></tr>`).join("")||`<tr><td colspan="5">No students yet.</td></tr>`}</tbody></table></div>`}
+  if(t==="faculty"){const list=facs.filter(u=>match([u.name,u.email,u.phone].join(" ")));return`${head("Faculty",`${facs.filter(u=>u.status==="active").length} faculty members`,`<button class="btn btn-flame" data-modal="user" data-role="faculty">${I("plus")} Add faculty</button>`)}
+    <div class="ptools">${search("Name, email or phone…")}</div>
+    <div class="box tablewrap"><table><thead><tr><th>Faculty</th><th>Contact</th><th>Batches</th><th>Last login</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+    ${list.map(u=>`<tr><td><b>${esc(u.name)}</b></td><td>${esc(u.email)}<small class="db">${u.phone?"+91 "+esc(u.phone):""}</small></td><td class="wrapcell">${db.batches.filter(x=>x.facultyId===u.id).map(x=>`<span class="tag">${esc(x.name)}</span>`).join(" ")||"–"}</td><td class="mono">${esc(u.lastLogin||"–")}</td><td>${statusPill(u)}</td>
+      <td class="acts"><button class="btn btn-line btn-sm" data-modal="user" data-id="${u.id}">Edit</button>${u.status==="active"?`<button class="btn btn-line btn-sm" data-call="setUserStatus" data-args="${jarg({id:u.id,status:"removed"})}" data-confirm="Remove access?" data-ok="Access removed">Remove</button>`:`<button class="btn btn-line btn-sm" data-call="setUserStatus" data-args="${jarg({id:u.id,status:"active"})}" data-ok="Access restored">Restore</button>`}</td></tr>`).join("")||`<tr><td colspan="6">No faculty yet.</td></tr>`}</tbody></table></div>`}
+  if(t==="batches")return`${head("Batches",`${db.batches.length} batches`,`<button class="btn btn-flame" data-modal="batch">${I("plus")} New batch</button>`)}
+    <div class="box tablewrap"><table><thead><tr><th>Batch</th><th>Faculty</th><th>Schedule</th><th>Students</th><th>Meeting</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+    ${db.batches.map(x=>`<tr><td><b>${esc(x.name)}</b><small class="db">${esc(cTitle(x.courseId))}</small></td><td>${esc(uBy(x.facultyId)?.name||"–")}</td><td>${daysLabel(x.days)}<small class="db">${timeLabel(x)} · from ${fDate(x.startDate)}</small></td><td>${enrolled(x.id).length}</td><td>${x.meetingLink?`<a href="${esc(x.meetingLink)}" target="_blank" rel="noopener">Link</a>`:"–"}</td><td>${pill(x.status,x.status==="completed"?"ok":x.status==="upcoming"?"warn":"info")}</td>
+      <td class="acts"><button class="btn btn-line btn-sm" data-modal="batch" data-id="${x.id}">Edit</button><button class="btn btn-line btn-sm" data-modal="roster" data-id="${x.id}">Students</button></td></tr>`).join("")||`<tr><td colspan="7">No batches yet. Create one, then add students.</td></tr>`}</tbody></table></div>`;
+  if(t==="content"){
+    const list=db.batches,sel=state.pbatch||"all",ok=r=>sel==="all"||r.batchId===sel;
+    return`${head("Recordings & notes","Class content")}<div class="ptools"><label class="picker"><span>Batch</span><select data-pf="pbatch"><option value="all">All batches</option>${list.map(x=>`<option value="${x.id}" ${sel===x.id?"selected":""}>${esc(x.name)} · ${esc(cTitle(x.courseId))}</option>`).join("")}</select></label><button class="btn btn-flame" data-modal="recording">${I("plus")} Add recording</button><button class="btn btn-line" data-modal="note">${I("plus")} Add notes</button></div>
+    <div class="notice"><b>Google Drive videos:</b> upload the class video to Drive, set sharing to <b>"Anyone with the link · Viewer"</b>, turn off <b>"Viewers can download"</b> in the sharing settings, then paste the link here. Students watch it inside the portal with their name shown on the video.</div>
+    <div class="box tablewrap"><h3 class="bh">Recordings</h3><table><thead><tr><th>Date</th><th>Title</th><th>Batch</th><th>Source</th><th>Actions</th></tr></thead><tbody>${db.recordings.filter(ok).sort((a,b)=>a.date<b.date?1:-1).map(r=>`<tr><td>${fDate(r.date)}</td><td class="wrapcell"><b>${esc(r.title)}</b></td><td>${esc(bBy(r.batchId)?.name||"")}</td><td>${embedOf(r.url).kind}</td><td class="acts"><a class="btn btn-line btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">Open</a><button class="btn btn-line btn-sm" data-modal="recording" data-id="${r.id}">Edit</button><button class="btn btn-line btn-sm" data-call="deleteRecording" data-args="${jarg({id:r.id})}" data-confirm="Delete?" data-ok="Recording removed">Delete</button></td></tr>`).join("")||`<tr><td colspan="5">No recordings yet.</td></tr>`}</tbody></table></div>
+    <div class="box tablewrap"><h3 class="bh">Notes & materials</h3><table><thead><tr><th>Date</th><th>Title</th><th>Type</th><th>Batch</th><th>Actions</th></tr></thead><tbody>${db.notes.filter(ok).map(n=>`<tr><td>${fDate(n.date)}</td><td class="wrapcell"><b>${esc(n.title)}</b></td><td>${esc(n.kind)}</td><td>${esc(bBy(n.batchId)?.name||"")}</td><td class="acts"><a class="btn btn-line btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">Open</a><button class="btn btn-line btn-sm" data-modal="note" data-id="${n.id}">Edit</button><button class="btn btn-line btn-sm" data-call="deleteNote" data-args="${jarg({id:n.id})}" data-confirm="Delete?" data-ok="Note removed">Delete</button></td></tr>`).join("")||`<tr><td colspan="5">No notes yet.</td></tr>`}</tbody></table></div>`;
+  }
+  if(!db.batches.length&&["attendance","progress"].includes(t))return`${head(t==="attendance"?"Attendance":"Progress","No batches yet")}<div class="box">${empty("Create a batch first.","users")}</div>`;
+  if(t==="attendance")return`${head("Attendance","Attendance register")}${rosterForm(b())}`;
+  if(t==="progress")return`${head("Progress","Progress & topics")}<div class="ptools">${batchPick(db.batches)}</div>${progressForm(b(),true)}${topicsBlock(b(),true)}`;
+  if(t==="notices")return`${head("Calendar","Holidays & notices",`<button class="btn btn-flame" data-modal="event">${I("plus")} Add holiday or notice</button>`)}
+    <div class="box"><h3 class="bh">Upcoming and recent</h3>${noticeList(notices(40),()=>true)}</div>`;
+  if(t==="leave")return`${head("Leave","Faculty leave requests")}<div class="box">${db.leaves.length?db.leaves.slice().sort((a,b)=>(a.status==="pending"?0:1)-(b.status==="pending"?0:1)||(a.from<b.from?1:-1)).map(l=>leaveRow(l)).join(""):empty("No leave requests yet.","calendar")}</div>`;
+  if(t==="certificates"){const list=db.certificates.slice().reverse().filter(c=>match([c.certNo,uBy(c.studentId)?.name,cTitle(c.courseId)].join(" ")));return`${head("Certificates",`${db.certificates.filter(c=>c.status==="issued").length} issued`,`<button class="btn btn-flame" data-modal="cert">${I("award")} Issue certificate</button>`)}
+    <div class="ptools">${search("Certificate number, student or program…")}<a class="btn btn-line" href="#verify">Public verification page</a></div>
+    <div class="box tablewrap"><table><thead><tr><th>Certificate No.</th><th>Student</th><th>Program</th><th>Issued</th><th>Grade</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+    ${list.map(c=>`<tr><td class="mono">${esc(c.certNo)}</td><td>${esc(uBy(c.studentId)?.name||"")}</td><td class="wrapcell">${esc(cTitle(c.courseId))}</td><td>${fDate(c.issueDate)}</td><td>${esc(c.grade||"–")}</td><td>${c.status==="issued"?pill("Issued","ok"):pill("Revoked","bad")}</td>
+      <td class="acts"><button class="btn btn-line btn-sm" data-mycert="${c.id}" data-kind="view">View</button><button class="btn btn-line btn-sm" data-mycert="${c.id}" data-kind="pdf">PDF</button>${c.status==="issued"?`<button class="btn btn-line btn-sm" data-call="setCertificateStatus" data-args="${jarg({id:c.id,status:"revoked"})}" data-confirm="Revoke?" data-ok="Certificate revoked">Revoke</button>`:`<button class="btn btn-line btn-sm" data-call="setCertificateStatus" data-args="${jarg({id:c.id,status:"issued"})}" data-ok="Certificate restored">Restore</button>`}</td></tr>`).join("")||`<tr><td colspan="7">No certificates yet.</td></tr>`}</tbody></table></div>`}
+  if(t==="photos")return photosView();
+  return profileView();
+}
+function leaveRow(l){
+  const u=uBy(l.userId);
+  return`<div class="trow2"><div><b>${esc(u?.name||l.userId)}</b> · ${fDate(l.from)}${l.to!==l.from?" – "+fDate(l.to):""}<small>${esc(l.reason)}${l.status!=="pending"?" · "+l.status+(l.decidedAt?" on "+esc(String(l.decidedAt).slice(0,10)):""):""}</small></div>
+    <div class="row">${l.status==="pending"?`<button class="btn btn-flame btn-sm" data-call="decideLeave" data-args="${jarg({id:l.id,status:"approved"})}" data-ok="Leave approved">Approve</button><button class="btn btn-line btn-sm" data-call="decideLeave" data-args="${jarg({id:l.id,status:"rejected"})}" data-ok="Leave rejected">Reject</button>`:pill(l.status,l.status==="approved"?"ok":"bad")}</div></div>`;
+}
+function photosView(){
+  const slot=(key,label,c)=>`<div class="slot"><div class="thumb">${state.photos[key]?`<img src="${state.photos[key]}" alt="">`:c?pic(key,c):`<div style="position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-weight:700">No photo yet</div>`}</div><div class="sb"><b>${esc(label)}</b><label class="up">${state.photos[key]?"Replace photo":"Try a photo"}<input type="file" accept="image/*" data-photo="${key}"></label>${state.photos[key]?`<button class="btn btn-line btn-sm" data-unphoto="${key}">Remove</button>`:""}</div></div>`;
+  return`${head("Site photos","Preview photos")}<p class="srcs">Try photos here before you publish them. A preview lasts until the page reloads; to make a photo permanent, add it to the img folder on GitHub (see SETUP.md).</p>
+    <div class="box"><h3 class="bh">Home hero</h3><div class="slots">${HS.map((h,i)=>slot("h:"+i,"Hero slide "+(i+1),{...h,track:"genai",title:""})).join("")}</div></div>
+    <div class="box"><h3 class="bh">Trainers</h3><div class="slots">${Object.entries(TRAINERS).map(([k,t])=>slot("t:"+k,t.name,null)).join("")}</div></div>
+    <div class="box"><h3 class="bh">Program images</h3><div class="slots">${COURSES.map(c=>slot("c:"+c.id,c.title,c)).join("")}</div></div>`;
+}
+/* Admin modals */
+const courseOpts=()=>COURSES.map(c=>[c.id,c.title]);
+const batchOpts=(all)=>(all?[["","All batches"]]:[]).concat(D().batches.filter(b=>all||b.status!=="completed").map(b=>[b.id,`${b.name} · ${cTitle(b.courseId)}`]));
+function openPModal(kind,id,role){
+  const db=D();
+  if(kind==="user"){const u=id?uBy(id):{role},isS=(u.role||role)==="student",pw="arivu"+Math.floor(1000+Math.random()*9000);
+    return modal(id?`Edit ${esc(u.name)}`:`Add ${isS?"student":"faculty"}`,apiForm("saveUser",[{n:"id",t:"hidden",v:id||""},{n:"role",t:"hidden",v:u.role||role},{n:"name",l:"Full name"},{n:"email",l:"Email (used to log in)",t:"email"},{n:"phone",l:"WhatsApp number",t:"tel"},
+      {n:"password",l:id?"New password (leave blank to keep)":"Temporary password",v:id?"":pw,help:id?"":"Share it with them on WhatsApp. They can change it after logging in."},...(isS&&!id?[{n:"batchId",l:"Enrol in batch (optional)",t:"select",o:[["","Later"]].concat(batchOpts())}]:[])],u,id?"Save changes":"Create account",{ok:id?"Account updated":"Account created",close:1}))}
+  if(kind==="enroll"){const u=uBy(id),have=db.enrollments.filter(e=>e.studentId===id).map(e=>e.batchId),opts=batchOpts().filter(o=>!have.includes(o[0]));
+    return modal(`Enrol ${esc(u.name)}`,opts.length?apiForm("enroll",[{n:"studentId",t:"hidden",v:id},{n:"batchId",l:"Batch",t:"select",o:opts,full:1}],{},"Enrol student",{ok:"Student enrolled",close:1}):empty("This student is already in every open batch. Create a new batch first.","users"))}
+  if(kind==="batch"){const x=id?bBy(id):{};
+    return modal(id?`Edit ${esc(x.name)}`:"New batch",apiForm("saveBatch",[{n:"id",t:"hidden",v:id||""},{n:"courseId",l:"Program",t:"select",o:courseOpts(),full:1},{n:"facultyId",l:"Faculty",t:"select",o:[["","Assign later"]].concat(db.users.filter(u=>u.role==="faculty"&&u.status==="active").map(u=>[u.id,u.name]))},{n:"kind",l:"Batch type",t:"select",o:[["Weekday","Weekday"],["Weekend","Weekend"],["Fast-track","Fast-track"]]},
+      {n:"days",l:"Class days",t:"days",v:"Mon,Tue,Wed,Thu,Fri",full:1},{n:"startTime",l:"Start time",t:"time",v:"19:00"},{n:"endTime",l:"End time",t:"time",v:"21:00"},{n:"startDate",l:"Start date",t:"date",v:today()},{n:"endDate",l:"End date (optional)",t:"date"},
+      {n:"mode",l:"Mode",t:"select",o:[["Classroom (Puducherry) & online","Classroom (Puducherry) & online"],["Classroom (Villupuram) & online","Classroom (Villupuram) & online"],["Classroom (Puducherry)","Classroom (Puducherry)"],["Classroom (Villupuram)","Classroom (Villupuram)"],["Online","Online"]]},{n:"status",l:"Status",t:"select",o:[["active","Active"],["upcoming","Upcoming"],["completed","Completed"]]},
+      {n:"meetingLink",l:"Meeting link (Zoom / Google Meet)",t:"url",ph:"https://zoom.us/j/…",full:1},{n:"meetingInfo",l:"Meeting ID / passcode / note",ph:"Meeting ID 123 456 7890 · Passcode ARIVU",full:1},{n:"name",l:"Batch name (optional)",ph:"Auto, e.g. MLOPS-Oct26-WD"}],x,id?"Save batch":"Create batch",{ok:id?"Batch updated":"Batch created",close:1}),true)}
+  if(kind==="roster"){const x=bBy(id),en=enrolled(id),others=db.users.filter(u=>u.role==="student"&&u.status==="active"&&!en.some(e=>e.studentId===u.id));
+    return modal(`${esc(x.name)} · students`,`<div class="box" style="box-shadow:none">${en.length?en.map(e=>`<div class="trow2"><div><b>${esc(uBy(e.studentId)?.name||e.studentId)}</b><small>${esc(uBy(e.studentId)?.studentCode||"")} · ${+e.progress||0}% · ${e.status}</small></div><button class="btn btn-line btn-sm" data-call="saveEnrollment" data-args="${jarg({id:e.id,status:"removed"})}" data-confirm="Remove from batch?" data-ok="Removed from batch">Remove</button></div>`).join(""):empty("No students yet.","users")}</div>
+      ${others.length?apiForm("enroll",[{n:"batchId",t:"hidden",v:id},{n:"studentId",l:"Add a student",t:"select",o:others.map(u=>[u.id,`${u.name} · ${u.studentCode}`]),full:1}],{},"Add to batch",{ok:"Student added"}):`<p class="srcs">Add new students from the Students tab.</p>`}`,true)}
+  if(kind==="recording"){const r=id?db.recordings.find(x=>x.id===id):{};
+    return modal(id?"Edit recording":"Add class recording",apiForm("saveRecording",[{n:"id",t:"hidden",v:id||""},{n:"batchId",l:"Batch",t:"select",o:batchOpts(),full:1},{n:"title",l:"Title",ph:"e.g. Power Query: merging sources",full:1},{n:"date",l:"Class date",t:"date",v:today()},{n:"module",l:"Module number (optional)",t:"number",min:1,ph:"e.g. 3"},
+      {n:"url",l:"Google Drive / YouTube (unlisted) link",t:"url",ph:"https://drive.google.com/file/d/…/view",full:1,help:"Drive: share as Anyone with the link (Viewer) and turn off downloads for viewers."}],Object.assign({},r,{module:r.module!==undefined&&r.module!==""?+r.module+1:""}),id?"Save":"Add recording",{ok:"Recording saved",close:1}))}
+  if(kind==="note"){const n=id?db.notes.find(x=>x.id===id):{};
+    return modal(id?"Edit notes":"Add notes or materials",apiForm("saveNote",[{n:"id",t:"hidden",v:id||""},{n:"batchId",l:"Batch",t:"select",o:batchOpts(),full:1},{n:"title",l:"Title",full:1},{n:"kind",l:"Type",t:"select",o:[["Notes","Notes"],["Assignment","Assignment"],["Dataset","Dataset"],["Slides","Slides"],["Reference","Reference"]]},{n:"date",l:"Date",t:"date",v:today()},{n:"url",l:"Google Drive link",t:"url",full:1}],n,id?"Save":"Add",{ok:"Notes saved",close:1}))}
+  if(kind==="event")return modal("Add holiday or notice",apiForm("saveEvent",[{n:"type",l:"Type",t:"select",o:[["holiday","Holiday (no classes)"],["announcement","Notice"],["class-off","Class cancelled"],["extra-class","Extra class"],["exam","Assessment"]]},{n:"batchId",l:"Applies to",t:"select",o:batchOpts(true)},{n:"title",l:"Title",ph:"e.g. Pongal holiday",full:1},{n:"date",l:"Date",t:"date",v:today()},{n:"endDate",l:"End date (optional)",t:"date"},{n:"details",l:"Details",t:"textarea",full:1}],{},"Publish",{ok:"Published",close:1}));
+  if(kind==="cert"){const opts=db.enrollments.filter(e=>e.status!=="removed"&&!db.certificates.some(c=>c.studentId===e.studentId&&c.courseId===e.courseId&&c.status==="issued")).map(e=>[e.id,`${uBy(e.studentId)?.name||e.studentId} · ${cTitle(e.courseId)} · ${bBy(e.batchId)?.name||""}${e.status==="completed"?" ✓":""}`]);
+    return modal("Issue certificate",opts.length?apiForm("issueCertificate",[{n:"enrollmentId",l:"Student & program",t:"select",o:opts,full:1},{n:"grade",l:"Grade",t:"select",o:[["Distinction","Distinction"],["First class","First class"],["Merit","Merit"],["Pass","Pass"],["","No grade"]]},{n:"issueDate",l:"Issue date",t:"date",v:today()}],{},"Issue certificate",{close:1})+`<p class="srcs">Issuing marks the enrolment as completed. The student can download it right away, and anyone can verify the number on the website.</p>`:empty("Every enrolled student already has a certificate.","award"))}
+}
+
+/* ---- Pages ---- */
+const TABS={
+  student:[["home","Dashboard","spark"],["classes","Classes & timings","calendar"],["attendance","Attendance","check"],["recordings","Recordings","video"],["notes","Notes","book"],["progress","Topics & progress","chart"],["certificates","Certificates","award"],["profile","Profile","mentor"]],
+  faculty:[["home","Dashboard","spark"],["attendance","Mark attendance","check"],["topics","Topics covered","book"],["progress","Student progress","chart"],["syllabus","Syllabus","layers"],["notices","Notices","megaphone"],["leave","Leave","calendar"],["profile","Profile","mentor"]],
+  admin:[["home","Overview","spark"],["leads","Leads","megaphone"],["students","Students","users"],["faculty","Faculty","mentor"],["batches","Batches","calendar"],["content","Recordings & notes","video"],["attendance","Attendance","check"],["progress","Progress & topics","chart"],["notices","Holidays & notices","pin"],["leave","Leave requests","briefcase"],["certificates","Certificates","award"],["photos","Site photos","monitor"],["profile","Profile","shield"]]
+};
+function pagePortal(){
+  if(PORTAL_OFF)return pageSignin();
+  if(!state.db)return pageSignin();
+  const me=state.db.me,tabs=TABS[me.role],t=tabs.some(x=>x[0]===state.ptab)?state.ptab:"home";state.ptab=t;
+  const body=me.role==="admin"?vAdmin(t):me.role==="faculty"?vFaculty(t):vStudent(t);
+  return`<main class="pm"><div class="wrap portal"><nav class="tabs" aria-label="${me.role} menu">
+    <div class="ucard"><span class="av">${initials(me.name)}</span><div><b>${esc(me.name)}</b><small>${{admin:"Administrator",faculty:"Faculty",student:"Student"}[me.role]}${me.studentCode?" · "+esc(me.studentCode):""}</small></div></div>
+    ${tabs.map(([k,v,ic])=>`<button data-tab="${k}" aria-current="${t===k}">${I(ic)}<span>${v}</span></button>`).join("")}
+    <button data-act="logout" class="tlogout">${I("arrowR")}<span>Log out</span></button></nav>
+  <section class="panel">${DEMO?`<div class="demo-banner">${I("spark")}<span><b>Preview mode.</b> This portal runs on sample data here. On your live site it reads and writes your Google Sheet.</span></div>`:""}${body}</section></div></main>`;
+}
+function pageSignin(){
+  return`<div class="wrap"><div class="authwrap">
+    <div class="auth-art">${logoSVG(58)}<span class="eyebrow" style="color:#ffb38f">Arivu portal</span><h2>One login for students, faculty and admin</h2>
+      <ul class="auth-list"><li>${I("calendar")}Class timings and meeting links</li><li>${I("check")}Attendance and progress</li><li>${I("video")}Class recordings and notes</li><li>${I("award")}Download your certificate</li></ul><p>Accounts are created by the institute. There's no public sign-up.</p></div>
+    <form class="auth pform" data-api="login" novalidate>
+      <h1 style="font-size:32px;color:var(--navy)">Log in</h1>
+      ${PORTAL_OFF?`<div class="notice"><b>The portal is being set up.</b> Please check back soon, or contact the institute.</div>`:""}
+      <div class="field"><label for="se">Email</label><input id="se" name="email" type="email" autocomplete="username" ${DEMO?'value="priya@example.com"':""}></div>
+      <div class="field"><label for="sp">Password</label><input id="sp" name="password" type="password" autocomplete="current-password" ${DEMO?'value="student123"':""}></div>
+      <div class="formerr" role="alert" hidden></div>
+      <button class="btn btn-flame" type="submit" ${PORTAL_OFF?"disabled":""}>Log in ${ARROW}</button>
+      <div class="notice"><b>Forgot your password?</b> Ask the institute office to reset it.</div>
+      ${DEMO?`<div class="notice"><b>Preview logins</b> (sample data)<div class="demo-logins">${[["Student","priya@example.com","student123"],["Faculty","sandhosh@arivu.in","faculty123"],["Admin","admin@arivu.in","admin123"]].map(([r,e,p])=>`<button type="button" class="btn btn-line btn-sm" data-demo="${e}|${p}">${r}</button>`).join("")}</div></div>`:""}
+    </form></div></div>`;
+}
+function pageVerify(){
+  const id=state.verifyId||"";
+  return phead("Certificate verification","Verify an Arivu certificate","Enter the certificate number printed at the bottom of the certificate.")+
+  `<section class="block soft" style="padding-top:48px"><div class="wrap" style="max-width:760px">
+    <form class="form" id="verifyForm" novalidate><div class="field"><label for="vf">Certificate number</label><input id="vf" value="${esc(id)}" placeholder="ARV-26-PBI-0001" autocomplete="off"></div><button class="btn btn-flame" type="submit" style="justify-self:start">Verify ${ARROW}</button></form>
+    <div id="vres" aria-live="polite"></div>
+  </div></section>`;
+}
+async function doVerify(no){
+  const box=$("#vres");if(!box)return;no=String(no||"").trim();if(!no)return;
+  box.innerHTML=`<div class="box" style="margin-top:16px">Checking…</div>`;
+  try{
+    if(PORTAL_OFF)throw new Error("Verification will be available once the portal is connected.");
+    const r=await api("verify",{certNo:no}),c=r.cert,cr=c&&course(c.courseId);
+    box.innerHTML=!r.found?`<div class="box vres bad">${I("shield")}<div><b>No certificate found</b><p>Check the number and try again. Contact the institute if you think this is a mistake.</p></div></div>`:
+      `<div class="box vres ${c.status==="issued"?"good":"bad"}">${I(c.status==="issued"?"check":"shield")}<div><b>${c.status==="issued"?"Valid certificate":"This certificate has been revoked"}</b>
+      <dl><dt>Name</dt><dd>${esc(c.name)}</dd><dt>Program</dt><dd>${esc(cr?cr.title:c.courseId)}</dd><dt>Issued</dt><dd>${fDate(c.issueDate)}</dd>${c.grade?`<dt>Grade</dt><dd>${esc(c.grade)}</dd>`:""}<dt>Certificate No.</dt><dd class="mono">${esc(c.certNo)}</dd></dl>
+      <p>Issued by Arivu Institute of AI &amp; Analytics in collaboration with SRM Infotech, Pondicherry.</p></div></div>`;
+  }catch(e){box.innerHTML=`<div class="box vres bad">${I("shield")}<div><b>Couldn't check right now</b><p>${esc(e.message)}</p></div></div>`}
+}
 
 /* ---------- Pages ---------- */
 function pageHome(){
@@ -1770,8 +2828,8 @@ function pageCourse(){
       </section>
       <section class="csec" id="sec-cert">
         <span class="eyebrow">Certificate</span><h2 class="ch2">Earn your Arivu certificate</h2>
-        <div class="certwrap"><div>${certSVG(c)}<p class="certnote">Sample certificate. Your name and details are added when you complete the program.</p></div>
-          <ul class="incl"><li>Course completion certificate</li><li>${lang?"Level-wise progress report":"Internship certificate"}</li><li>Add it to your resume and LinkedIn</li><li>Awarded after assessments and the ${lang?"final test":"capstone"}</li></ul></div>
+        <div class="certwrap"><div><button class="certimg" data-pa="sampleCert" data-id="${c.id}" aria-label="Open the sample certificate"><img data-cert="${c.id}" alt="Sample Arivu certificate for ${esc(c.title)}, in collaboration with SRM Infotech" width="2000" height="1414"></button><div class="row" style="justify-content:flex-start;margin-top:12px"><button class="btn btn-flame btn-sm" data-pa="sampleCert" data-id="${c.id}">${I("download")} View &amp; download sample</button><button class="btn btn-line btn-sm" data-go="verify">${I("shield")} Verify a certificate</button></div><p class="certnote">Sample certificate. Your name, certificate number and issue date are added when the institute issues yours.</p></div>
+          <ul class="incl"><li>In collaboration with SRM Infotech, Pondicherry</li><li>Unique certificate number employers can verify online</li><li>Download it as a PDF from your student portal</li><li>${lang?"Level-wise progress report":"Internship certificate"} as well</li><li>Awarded after assessments and the ${lang?"final test":"capstone"}, with 75% attendance</li></ul></div>
       </section>
       <section class="csec" id="sec-bat">
         <span class="eyebrow">Batches</span><h2 class="ch2">Upcoming batches</h2>
@@ -1833,77 +2891,6 @@ function brochure(c){
     <div class="row noprint">${LIVE?`<button class="btn btn-flame" data-act="print">${I("download")} Download PDF</button>`:""}${waLink()?`<a class="btn btn-line" href="${waLink("Hi Arivu, please share the "+c.title+" brochure and batch details.")}" target="_blank" rel="noopener">${I("whatsapp")} WhatsApp us</a>`:""}<button class="btn btn-navy" data-close-btn>Close</button></div>
   </div></div>`;
 }
-function pageSignin(){
-  return `<div class="wrap"><div class="authwrap">
-    <div class="auth-art">${logoSVG(58)}<span class="eyebrow" style="color:#ffb38f">Student portal</span><h2>Your classes, progress and recordings in one place</h2><p>Logins are issued by the institute when you enrol. There's no public sign-up.</p></div>
-    <form class="auth" id="signinForm" novalidate>
-      <h1 style="font-size:32px;color:var(--navy)">Log in</h1>
-      <div class="field"><label for="se">Email</label><input id="se" type="email" autocomplete="username" ${LIVE?"":'value="priya@example.com"'}></div>
-      <div class="field"><label for="sp">Password</label><input id="sp" type="password" autocomplete="current-password" ${LIVE?"":'value="student123"'}></div>
-      <div class="formerr" id="serr" hidden></div>
-      <button class="btn btn-flame" type="submit">Log in ${ARROW}</button>
-      <div class="notice"><b>New student?</b> Your login is created by the front office after enrolment.</div>
-      ${LIVE?"":`<div class="notice"><b>Demo logins</b> (preview only)<br>Student: priya@example.com / student123<br>Admin: admin@arivu.in / admin123</div>`}
-    </form></div></div>`;
-}
-function pct(e){return Math.round(Object.values(e.done).filter(Boolean).length/course(e.course).modules.length*100)}
-function ring(p){const R=35,C=2*Math.PI*R;return`<svg class="ring" viewBox="0 0 86 86"><circle class="bgc" cx="43" cy="43" r="${R}"/><circle class="fgc" cx="43" cy="43" r="${R}" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-p/100)}" transform="rotate(-90 43 43)"/><text x="43" y="49" text-anchor="middle">${p}%</text></svg>`}
-function pageStudent(){
-  const u=state.user,t=state.tab,tabs=[["overview","Dashboard"],["courses","My courses"],["recordings","Recordings"],["profile","Profile"]];let body="";
-  if(t==="overview"){
-    const recs=u.enrolled.reduce((n,e)=>n+(RECORDINGS[e.course]||[]).length,0),first=course(u.enrolled[0]?.course||"aie"),ft=first.trainer?TRAINERS[first.trainer].name:"Arivu faculty",nextMod=first.modules[Math.min(Object.keys(u.enrolled[0]?.done||{}).length,first.modules.length-1)];
-    body=`<h1>Welcome back, ${esc(u.name.split(" ")[0])}</h1>
-    <div class="kpis"><div><b>${u.enrolled.length}</b><span>programs enrolled</span></div><div><b>${Math.round(u.enrolled.reduce((s,e)=>s+pct(e),0)/Math.max(1,u.enrolled.length))}%</b><span>average progress</span></div><div><b>${recs}</b><span>recordings available</span></div></div>
-    <div class="box"><div class="ehead"><h3>Next live class</h3><span class="pill warn">Today, 7:00 PM</span></div><p style="margin:6px 0 0;color:var(--muted)">${esc(first.title)} · ${esc(nextMod[0])} · Trainer: ${esc(ft)}</p>${nextMod[3]?`<div class="lab" style="margin-top:12px">${I("flask")}<span><b>This week's lab:</b> ${esc(nextMod[3])}</span></div>`:""}</div>
-    ${u.enrolled.map(e=>{const c=course(e.course);return`<div class="box enrollcard">${ring(pct(e))}<div><div class="ehead"><h3>${esc(c.title)}</h3><span style="color:var(--muted);font-size:14px">${esc(e.batch)}</span></div><div style="color:var(--muted);font-size:14px">${Object.values(e.done).filter(Boolean).length} of ${c.modules.length} modules complete · ${dur(c)} · ${c.hours} hrs</div></div></div>`}).join("")}`;
-  } else if(t==="courses"){
-    body=`<h1>My courses</h1>`+(u.enrolled.map((e,ei)=>{const c=course(e.course),p=pct(e);return`<div class="box"><div class="ehead"><h3>${esc(c.title)}</h3><span class="mono">${p}%</span></div><div class="prog" style="margin-top:10px"><i style="width:${p}%"></i></div>
-      <div class="checks">${c.modules.map((m,i)=>`<label><input type="checkbox" data-mod="${ei}:${i}" ${e.done[i]?"checked":""}> M${i+1} · ${esc(m[0])} <span style="color:var(--muted);font-size:14px">${m[1]} hrs</span></label>`).join("")}</div></div>`}).join("")||`<div class="empty">You're not enrolled in a program yet.</div>`);
-  } else if(t==="recordings"){
-    const w=state.watching;
-    body=`<h1>Class recordings</h1>${w?`<div class="player"><div><b style="font-size:22px">▶ ${esc(w[0])}</b><div style="color:#b9c4f5;margin-top:6px">Video player goes here (unlisted YouTube, Vimeo or your own storage)</div></div><span class="bar"></span></div>`:""}
-    ${u.enrolled.map(e=>{const r=RECORDINGS[e.course]||[],c=course(e.course);return`<div class="box"><div class="ehead"><h3>${esc(c.title)}</h3><span style="color:var(--muted)">${r.length} sessions</span></div>
-      ${r.length?r.map((x,i)=>`<div class="rec"><div class="thumb">${pic("c:"+c.id,c)}<b>▶</b></div><div><h4>${esc(x[0])}</h4><span class="mono" style="color:var(--muted)">${x[1]} · ${x[2]} · Module ${x[3]}</span></div><button class="btn btn-line btn-sm" data-watch="${e.course}:${i}">Watch</button></div>`).join(""):`<p style="color:var(--muted)">Recordings appear here within a few hours of each live class.</p>`}</div>`}).join("")}`;
-  } else {
-    body=`<h1>Profile</h1><div class="box fg2"><div class="field"><label for="p1">Name</label><input id="p1" value="${esc(u.name)}" disabled></div><div class="field"><label for="p2">Email</label><input id="p2" value="${esc(u.email)}" disabled></div><div class="field"><label for="p3">WhatsApp</label><input id="p3" value="+91 ${esc(u.phone||"")}" disabled></div><div class="field"><label for="p4">Student ID</label><input id="p4" value="ARV-2026-${String(u.id).padStart(4,"0")}" disabled></div></div><p style="color:var(--muted)">To change these details, contact the institute office.</p>`;
-  }
-  return `<main class="pm"><div class="wrap portal"><nav class="tabs" aria-label="Student menu">${tabs.map(([k,v])=>`<button data-tab="${k}" aria-current="${t===k}">${v}</button>`).join("")}</nav><section class="panel">${body}</section></div></main>`;
-}
-function pageAdmin(){
-  const t=state.tab==="overview"?"leads":state.tab,tabs=[["leads","Leads & enquiries"],["students","Students"],["create","Create student"],["photos","Site photos"]];
-  const students=state.users.filter(u=>u.role==="student");let body="";
-  if(t==="leads"){
-    body=`<h1>Leads &amp; enquiries</h1>
-    <div class="notice">${CONFIG.leadWebhook?`<b>Google Sheet connected.</b> Every form on the live site is also saved to your sheet.`:`<b>Google Sheet not connected yet.</b> Leads below are sample data plus anything submitted in this browser. Follow SETUP.md to receive real leads in a Google Sheet.`}</div>
-    <div class="kpis"><div><b>${state.leads.length}</b><span>total leads</span></div><div><b>${state.leads.filter(l=>l.status==="new").length}</b><span>not yet contacted</span></div><div><b>${state.leads.filter(l=>l.status==="enrolled").length}</b><span>enrolled</span></div></div>
-    <div class="box tablewrap"><table><thead><tr><th>Received</th><th>Name</th><th>Program</th><th>Source</th><th>Email</th><th>WhatsApp</th><th>Status</th></tr></thead><tbody>
-    ${state.leads.map((l,i)=>`<tr><td class="mono">${l.at}</td><td>${esc(l.name)}</td><td>${esc(course(l.course).title)}</td><td>${esc(l.src)}</td><td>${esc(l.email)}</td><td class="mono">+91 ${esc(l.phone)}</td><td><select data-lead="${i}" aria-label="Status for ${esc(l.name)}">${["new","called","demo booked","enrolled","not interested"].map(s=>`<option ${l.status===s?"selected":""}>${s}</option>`).join("")}</select></td></tr>`).join("")}
-    </tbody></table></div>`;
-  } else if(t==="students"){
-    body=`<h1>Students</h1><div class="box tablewrap"><table><thead><tr><th>Name</th><th>Email</th><th>Program</th><th>Batch</th><th>Progress</th></tr></thead><tbody>
-    ${students.flatMap(s=>s.enrolled.map(e=>`<tr><td>${esc(s.name)}</td><td>${esc(s.email)}</td><td>${esc(course(e.course).title)}</td><td>${esc(e.batch)}</td><td><span class="pill ${pct(e)>=50?"ok":"warn"}">${pct(e)}%</span></td></tr>`)).join("")}</tbody></table></div>`;
-  } else if(t==="create"){
-    body=`<h1>Create student account</h1><p style="margin:0;color:var(--muted)">Only admins can create logins. The student gets their email and temporary password on WhatsApp.</p>
-    <form class="box fg2" id="createForm" novalidate>
-      <div class="field"><label for="cn">Full name</label><input id="cn"></div>
-      <div class="field"><label for="ce">Email</label><input id="ce" type="email"></div>
-      <div class="field"><label for="cp">WhatsApp number</label><input id="cp" inputmode="numeric" maxlength="10"></div>
-      <div class="field"><label for="cw">Temporary password</label><input id="cw" value="welcome${Math.floor(100+Math.random()*900)}"></div>
-      <div class="field"><label for="cc">Program</label><select id="cc">${COURSES.map(c=>`<option value="${c.id}">${esc(c.title)}</option>`).join("")}</select></div>
-      <div class="field"><label for="cb">Batch</label><input id="cb" value="Oct-26 (Weekend)"></div>
-      <div class="formerr" id="cerr" hidden style="grid-column:1/-1"></div>
-      <div style="grid-column:1/-1"><button class="btn btn-flame" type="submit">Create account ${ARROW}</button></div>
-    </form>`;
-  } else {
-    const slot=(key,label,c)=>`<div class="slot"><div class="thumb">${state.photos[key]?`<img src="${state.photos[key]}" alt="">`:c?pic(key,c):`<div style="position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-weight:700">No photo yet</div>`}</div><div class="sb"><b>${esc(label)}</b><label class="up">${state.photos[key]?"Replace photo":"Upload photo"}<input type="file" accept="image/*" data-photo="${key}"></label>${state.photos[key]?`<button class="btn btn-line btn-sm" data-unphoto="${key}">Remove</button>`:""}</div></div>`;
-    body=`<h1>Site photos</h1><p style="margin:0;color:var(--muted)">Try real photos of your trainers, classrooms and events here. In this prototype they last until the page is reloaded; to make a photo permanent, add it to the img folder (see SETUP.md).</p>
-    <div class="box"><h3 style="font-size:19px;margin-bottom:12px;color:var(--navy)">Home hero</h3><div class="slots">${HS.map((h,i)=>slot("h:"+i,"Hero slide "+(i+1),{...h,track:"genai",title:""})).join("")}</div></div>
-    <div class="box"><h3 style="font-size:19px;margin-bottom:12px;color:var(--navy)">Trainers</h3><div class="slots">${Object.entries(TRAINERS).map(([k,t])=>slot("t:"+k,t.name,null)).join("")}</div></div>
-    <div class="box"><h3 style="font-size:19px;margin-bottom:12px;color:var(--navy)">Projects gallery</h3><div class="slots">${GALLERY.map(g=>slot(g.k,g.t,g.c)).join("")}</div></div>
-    <div class="box"><h3 style="font-size:19px;margin-bottom:12px;color:var(--navy)">Program images</h3><div class="slots">${COURSES.map(c=>slot("c:"+c.id,c.title,c)).join("")}</div></div>`;
-  }
-  return `<main class="pm"><div class="wrap portal"><nav class="tabs" aria-label="Admin menu">${tabs.map(([k,v])=>`<button data-tab="${k}" aria-current="${t===k}">${v}</button>`).join("")}</nav><section class="panel">${body}</section></div></main>`;
-}
 
 /* ---------- Effects ---------- */
 function countUps(){
@@ -1935,8 +2922,8 @@ function setHS(i){state.hs=(i+HS.length)%HS.length;
   $$(".hs-dots button").forEach((b,k)=>{b.setAttribute("aria-current",String(k===state.hs));b.classList.toggle("done",k<state.hs);const f=b.querySelector("i");f.style.animation="none";void f.offsetHeight;f.style.animation=""});
   hsAuto()}
 function hsAuto(){clearTimeout(hsTimer);if(REDUCED||state.route!=="home")return;hsTimer=setTimeout(()=>{if(state.route==="home"&&$(".hs"))setHS(state.hs+1)},6500)}
-function afterRender(){countUps();pauseSvg();scrollSpy();if(state.route==="home"){hsAuto()}else clearTimeout(hsTimer);
-  const c=state.route==="course"&&course(state.courseId),T={programs:"Programs",trainers:"Trainers",placements:"Placements",about:"About",contact:"Contact",signin:"Student log in",portal:"My learning"}[state.route];
+function afterRender(){countUps();pauseSvg();scrollSpy();if(state.route==="course")paintCerts();if(state.route==="verify"&&state.verifyId)doVerify(state.verifyId);if(state.route==="home"){hsAuto()}else clearTimeout(hsTimer);
+  const c=state.route==="course"&&course(state.courseId),T={programs:"Programs",trainers:"Trainers",placements:"Placements",about:"About",contact:"Contact",signin:"Portal log in",portal:"Portal",verify:"Verify a certificate"}[state.route];
   document.title=c?`${c.title} (${dur(c)}) · Arivu Institute of AI & Analytics`:T?`${T} · Arivu Institute of AI & Analytics`:"Arivu Institute of AI & Analytics | AI, Data Science, MLOps & Supply Chain courses in Puducherry & Villupuram";
 }
 
@@ -1951,28 +2938,37 @@ function render(){
   else if(r==="about")app.innerHTML=pageAbout();
   else if(r==="contact")app.innerHTML=pageContact();
   else if(r==="signin")app.innerHTML=pageSignin();
-  else if(r==="portal")app.innerHTML=!state.user?pageSignin():state.user.role==="admin"?pageAdmin():pageStudent();
+  else if(r==="portal")app.innerHTML=pagePortal();
+  else if(r==="verify")app.innerHTML=pageVerify();
   else app.innerHTML=pageHome();
-  if(r==="signin"&&state.user)return go("portal");
+  if(r==="signin"&&state.db)return go("portal");
   afterRender();
 }
 function closeLayer(){$("#layer").innerHTML=""}
 function openBrochure(id){const c=course(id);state.bro=id;$("#layer").innerHTML=state.unlocked[id]?brochure(c):leadModal(c);setTimeout(()=>($("#ln")||$("#layer .xbtn"))?.focus(),0)}
 function openEnq(id){state.fab=true;state.fabCourse=id||null;renderFab();setTimeout(()=>$("#eq-n")?.focus(),0)}
 document.addEventListener("click",e=>{
-  const g=e.target.closest("[data-go]");if(g){closeLayer();state.fab=false;renderFab();return go(g.dataset.go,{tab:"overview",watching:null})}
+  const g=e.target.closest("[data-go]");if(g){closeLayer();state.fab=false;renderFab();return go(g.dataset.go)}
   const br=e.target.closest("[data-brochure]");if(br)return openBrochure(br.dataset.brochure);
   const en=e.target.closest("[data-enq]");if(en){closeLayer();return openEnq(en.dataset.enq)}
   const j=e.target.closest("[data-jump]");if(j){const s=$("#sec-"+j.dataset.jump);if(s)s.scrollIntoView({behavior:REDUCED?"auto":"smooth",block:"start"});$$(".subnav [data-jump]").forEach(b=>b.setAttribute("aria-current",String(b===j)));return}
   const c=e.target.closest("[data-course]");if(c){closeLayer();return go("course",{courseId:c.dataset.course})}
   const tr=e.target.closest("[data-track]");if(tr){state.track=tr.dataset.track;state.q="";if(state.route==="home"&&tr.classList.contains("ttab")){$("#catalog").innerHTML=catalogHTML();return}if(state.route!=="programs")go("programs");else{$("#catalog").innerHTML=catalogHTML();afterRender()}return}
   const hb=e.target.closest("[data-hs]");if(hb){const v=hb.dataset.hs;return setHS(v==="prev"?state.hs-1:v==="next"?state.hs+1:+v)}
-  const tab=e.target.closest("[data-tab]");if(tab){state.tab=tab.dataset.tab;state.watching=null;return render()}
-  const w=e.target.closest("[data-watch]");if(w){const [cid,i]=w.dataset.watch.split(":");state.watching=RECORDINGS[cid][+i];render();return window.scrollTo(0,0)}
+  const tab=e.target.closest("[data-tab]");if(tab){state.ptab=tab.dataset.tab;state.watch=null;state.pq="";render();window.scrollTo(0,0);return}
+  const gt=e.target.closest("[data-goto]");if(gt){state.ptab=gt.dataset.goto;if(gt.dataset.batch)state.pbatch=gt.dataset.batch;state.pq="";render();window.scrollTo(0,0);return}
+  const ps=e.target.closest("[data-pset]");if(ps){state[ps.dataset.pset]=ps.dataset.val||null;rerender();if(ps.dataset.pset==="watch"&&ps.dataset.val)$(".vbox")?.scrollIntoView({behavior:REDUCED?"auto":"smooth",block:"center"});return}
+  const pm=e.target.closest("[data-modal]");if(pm)return openPModal(pm.dataset.modal,pm.dataset.id,pm.dataset.role);
+  const ca=e.target.closest("[data-call]");if(ca){e.preventDefault();return callAction(ca)}
+  const mc=e.target.closest("[data-mycert]");if(mc){const cf=(D().certificates||[]).find(x=>x.id===mc.dataset.mycert),c=cf&&course(cf.courseId);if(!c)return;const o={name:D().me.role==="student"?D().me.name:(uBy(cf.studentId)?.name||""),certNo:cf.certNo,issueDate:cf.issueDate,grade:cf.grade};return mc.dataset.kind==="view"?openCertModal(c,o):downloadCert(c,o,mc.dataset.kind)}
+  const cd=e.target.closest("[data-certdl]");if(cd&&state.certOpen)return downloadCert(state.certOpen.c,state.certOpen.o,cd.dataset.certdl);
+  const pa=e.target.closest("[data-pa='sampleCert']");if(pa){const c=course(pa.dataset.id);if(c)openCertModal(c,{});return}
+  const dm=e.target.closest("[data-demo]");if(dm){const[em,pw]=dm.dataset.demo.split("|"),f=dm.closest("form");f.email.value=em;f.password.value=pw;f.requestSubmit();return}
   const up=e.target.closest("[data-unphoto]");if(up){delete state.photos[up.dataset.unphoto];toast("Photo removed");return render()}
   const a=e.target.closest("[data-act]");
   if(a){const act=a.dataset.act;
-    if(act==="logout"){state.user=null;toast("Logged out");return go("home")}
+    if(act==="logout"){api("logout").catch(()=>{});endSession(false);renderNav();toast("Logged out");return go("home")}
+    if(act==="allP"){a.closest("form").querySelectorAll("input[type=radio][value=P]").forEach(r=>r.checked=true);return}
     if(act==="enq"){if(state.fab){state.fab=false;renderFab()}else openEnq(null);return}
     if(act==="mega"){state.mega=!state.mega;return renderNav()}
     if(act==="menu"){const m=$("#mnav");m.hidden=!m.hidden;a.setAttribute("aria-expanded",String(!m.hidden));return}
@@ -1986,16 +2982,19 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape"){closeLayer();if(state.mega){state.mega=false;renderNav()}if(state.fab){state.fab=false;renderFab()}}
   if((e.key==="Enter"||e.key===" ")&&e.target.matches(".banner[data-course]")){e.preventDefault();go("course",{courseId:e.target.dataset.course})}
 });
-document.addEventListener("input",e=>{if(e.target.id==="q"){state.q=e.target.value;$("#catalog").innerHTML=catalogHTML()}});
+document.addEventListener("input",e=>{
+  if(e.target.id==="q"){state.q=e.target.value;$("#catalog").innerHTML=catalogHTML()}
+  if(e.target.matches("[data-pq]")){state.pq=e.target.value;rerender();const el=$("[data-pq]");if(el){el.focus();el.setSelectionRange(el.value.length,el.value.length)}}
+});
 document.addEventListener("change",e=>{
   const el=e.target;
-  if(el.dataset.mod){const [ei,i]=el.dataset.mod.split(":");state.user.enrolled[+ei].done[i]=el.checked;render();toast(el.checked?"Module marked complete":"Module marked incomplete")}
-  if(el.dataset.lead){state.leads[+el.dataset.lead].status=el.value;toast("Lead status updated");render()}
+  if(el.dataset.pf){state[el.dataset.pf]=el.value;state.watch=null;rerender();return}
+  if(el.dataset.leadst){busy(true);api("updateLead",{id:el.dataset.leadst,status:el.value}).then(()=>toast("Lead updated")).catch(x=>toast(x.message)).finally(()=>busy(false));return}
   if(el.dataset.photo&&el.files&&el.files[0]){const key=el.dataset.photo,f=el.files[0];if(!f.type.startsWith("image/"))return toast("Choose an image file (JPG or PNG)");const r=new FileReader();r.onload=()=>{state.photos[key]=r.result;toast("Photo added. It now shows on the site.");render()};r.readAsDataURL(f)}
 });
 function vfield(id,msg){const f=$("#"+id);if(!f)return!!msg;f.classList.toggle("err",!!msg);f.querySelector(".msg").textContent=msg;return !!msg}
 const okEmail=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s),okPhone=s=>/^[6-9]\d{9}$/.test(s);
-function addLead(l){state.leads.unshift(l);sendLead(l)}
+function addLead(l){sendLead(l)}
 document.addEventListener("submit",e=>{
   e.preventDefault();const f=e.target;
   if(f.id==="psearch")return;
@@ -2017,21 +3016,11 @@ document.addEventListener("submit",e=>{
     const bad=[vfield("cf-name",name.length<2?"Enter your name.":""),vfield("cf-phone",okPhone(phone)?"":"Enter a 10-digit Indian mobile number."),vfield("cf-email",okEmail(email)?"":"Enter a valid email address.")].some(Boolean);
     if(bad)return;addLead({name,email,phone,course:$("#cf-c").value,at:stamp(),status:"new",src:`Contact · ${$("#cf-loc").value} · ${$("#cf-b").value}`,message:$("#cf-m").value.trim()});f.reset();toast("Message sent. A counsellor will reply within one working day.");return;
   }
-  if(f.id==="signinForm"){
-    const em=$("#se").value.trim().toLowerCase(),pw=$("#sp").value,u=state.users.find(x=>x.email===em&&x.pass===pw);
-    if(!u){const er=$("#serr");er.hidden=false;er.textContent="That email and password don't match an account. Check both, or ask the office to reset your password.";return}
-    state.user=u;toast(`Logged in as ${u.name}`);return go("portal",{tab:u.role==="admin"?"leads":"overview"});
-  }
-  if(f.id==="createForm"){
-    const n=$("#cn").value.trim(),em=$("#ce").value.trim().toLowerCase(),ph=$("#cp").value.replace(/\D/g,""),pw=$("#cw").value,er=$("#cerr");
-    const msg=n.length<2?"Enter the student's name.":!okEmail(em)?"Enter a valid email.":!okPhone(ph)?"Enter a 10-digit WhatsApp number.":pw.length<6?"The password needs at least 6 characters.":state.users.some(u=>u.email===em)?"An account with this email already exists.":"";
-    if(msg){er.hidden=false;er.textContent=msg;return}
-    state.users.push({id:state.users.length+1,name:n,email:em,pass:pw,role:"student",phone:ph,enrolled:[{course:$("#cc").value,batch:$("#cb").value,done:{}}]});
-    toast(`Account created for ${n}. They can log in with ${em}.`);state.tab="students";render();
-  }
+  if(f.id==="verifyForm"){const no=$("#vf").value.trim().toUpperCase();if(!no)return;state.verifyId=no;try{history.replaceState(null,"","#verify-"+no)}catch(x){}doVerify(no);return}
+  if(f.dataset.api)return submitApiForm(f);
 });
 if(location.hash.length>1)Object.assign(state,readHash());
-renderFooter();renderFab();countdown();render();
+renderFooter();renderFab();countdown();render();restoreSession();
 </script>
 </body>
 </html>
