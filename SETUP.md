@@ -92,8 +92,8 @@ Search for `const CONFIG` in `index.html`:
 
 ```js
 api:"https://script.google.com/macros/s/…/exec",   // your Apps Script URL (already set)
-whatsapp:"",       // e.g. "919876543210" adds WhatsApp buttons
-phone:"", email:"",
+whatsapp:"918300094669",   // WhatsApp buttons use this number
+phone:"+91 83000 94669", email:"",
 campuses:[["Puducherry campus","Full address coming soon"],["Villupuram campus","Full address coming soon"]]
 ```
 
